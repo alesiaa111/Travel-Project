@@ -1,14 +1,14 @@
 import React from "react";
-import { Header } from "./views/header/Header.js";
-import { InfoContent } from "./views/info-content/InfoContent.js";
-import { Footer } from "./views/Footer.js";
+import { Header } from "./Header.js";
+import { Content } from "./Content.js";
+// import { Footer } from "./views/Footer.js";
 
 export const App = () => {
   return (
     <div>
       <Header />
-      <InfoContent/>
-      <Footer/>
+      <Content/>
+      {/* <Footer/> */}
     </div>
   );
 };
