@@ -1,13 +1,13 @@
 import React from "react";
 import styles from './index.module.css';
 
-export const Button = ({ text, onClick }) => {
+export const Button = ({ onClick }) => {
     return (
       <button
         onClick={onClick}
         className={styles.button}
       >
-        {text}
+        Записаться
       </button>
     );
   };
