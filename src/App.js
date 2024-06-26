@@ -9,7 +9,6 @@ import styles from "./index.css"
 export const App = () => {
 
 
-
   return (
     <div>
     <Header />
