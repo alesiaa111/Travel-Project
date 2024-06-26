@@ -5,7 +5,8 @@ import { Button } from "./components/Button/Button";
 export const Content = () => {
     return (
         <div>
-            Сборные сплавы
+            <h2>Сборные сплавы</h2>
+            
             <Button />
         </div>
     )

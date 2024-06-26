@@ -1,11 +1,8 @@
 import React from "react";
-import styles from "./index.css";
 import Logo from './assets/Logo.png'
 
 
 export const Header = () => {
-
-
 
   return (
     <div>
@@ -13,8 +10,8 @@ export const Header = () => {
       <div>
         <h1>Организация сплавов</h1>
         <h2>
-          +375(25) 655-54-05 <br />
-          +375(29) 114-52-20
+          +375(89) 668-54-05 <br />
+          +375(55) 664-58-25
         </h2>
       </div>
     </div>
