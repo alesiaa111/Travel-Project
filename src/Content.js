@@ -12,6 +12,8 @@ export const Content = ({ onClick }) => {
       <div>
         <h2>Сборные сплавы</h2>
         {<Button onClick={() => {setShowModal(toggler)}} />}
+         showModal &&  <div>Modal</div>
+          
       </div>
       <div>
         <h2>Корпоративные сплавы</h2>
