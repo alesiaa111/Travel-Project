@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "./components/button/Button";
+import { Modal } from "./components/modal/Modal";
 import styles from "./content.module.css";
 
 export const Content = ({ onClick }) => {
@@ -12,8 +13,11 @@ export const Content = ({ onClick }) => {
       <div>
         <h2>Сборные сплавы</h2>
         {<Button onClick={() => {setShowModal(toggler)}} />}
-         showModal &&  <div>Modal</div>
-          
+         {showModal &&  (
+          <Modal isOpen={showModal}>
+            <div>Заказать звонок</div>
+          </Modal>
+         )}
       </div>
       <div>
         <h2>Корпоративные сплавы</h2>
