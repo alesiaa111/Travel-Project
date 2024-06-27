@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "./components/Button";
+import { Button } from "./components/button/Button";
 import styles from "./content.module.css";
 
 export const Content = ({ onClick }) => {
