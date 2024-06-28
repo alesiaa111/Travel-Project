@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Button } from "./components/button/Button";
-import { Modal } from "./components/modal/Modal";
-import styles from "./content.module.css";
+import { Button } from "../button/index.js";
+import { Modal } from "../modal/index.js";
+import styles from "./index.module.css";
 
 export const Content = ({ onClick }) => {
   const [showModal, setShowModal] = useState(false);

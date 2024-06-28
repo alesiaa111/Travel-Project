@@ -1,7 +1,8 @@
 import React from "react";
-import { Header } from "./Header";
-import { Content } from "./Content";
-import { Footer } from "./Footer";
+import { Header } from "./components/header";
+import { Content } from "./components/content";
+import { Footer } from "./components/footer/Footer";
+import { Form } from "./components/form";
 import styles from "./index.css";
 
 export const App = () => {

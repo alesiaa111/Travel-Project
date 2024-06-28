@@ -1,8 +1,8 @@
 import React, { useState} from "react";
 import { createPortal } from "react-dom";
-import styles from "./modal.module.css";
+import styles from "./index.module.css";
 import { ModalContext } from "./context";
-import { Form } from "../form/Form";
+import { Form } from "../form";
 
 
 
