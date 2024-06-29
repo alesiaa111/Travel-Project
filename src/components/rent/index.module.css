@@ -32,7 +32,7 @@
       line-height: 30px;
   }   
   
-  span{
+  .price{
       font-weight: bold;
       color:black;
       background-color:yellow;
