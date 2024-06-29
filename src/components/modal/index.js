@@ -1,31 +1,27 @@
-import React, { useState, useMemo, memo  } from "react";
-import { createPortal } from "react-dom";
+import React, { useContext, useMemo, memo  } from "react";
 import styles from "./index.module.css";
-import { ModalContext } from "./context";
 import { Form } from "../form";
 import { ModalHeader } from "./modal-header";
+import { ModalContext } from "./context";
+import { createPortal } from "react-dom";
 
 export const Modal = memo(({ isOpen, onClose }) => {
-  const [persons, setPersons] = useState("");
   const value = useMemo(() => ({ onClose }), [onClose]);
 
   if (!isOpen) {
     return null;
   }
 
-  const onUserAdd = (userObj) => {
-    setPersons((prevPersons) => [...prevPersons, userObj]);
-  };
 
   return createPortal(
-    <ModalContext.Provider value ={value}>
-      <ModalHeader />
+    <ModalContext.Provider value={value}>
          <div className={styles.modal}>
+         <ModalHeader onClick={onClose}/>
             <div className={styles.title}>
-            <span>Остались вопросы?</span>
+            <h3>Остались вопросы?</h3>
             <span>Оставьте Ваш номер и мы перезвоним Вам прямо сейчас!</span>
           </div>
-          <Form onUserAdd={onUserAdd} />
+          <Form />
           </div>
     </ModalContext.Provider>,
     document.body
@@ -33,3 +29,4 @@ export const Modal = memo(({ isOpen, onClose }) => {
 });
 
 Modal.Header = ModalHeader;
+
