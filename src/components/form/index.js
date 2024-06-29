@@ -57,7 +57,7 @@ export const Form = () => {
         />
       </div>
       <Center>
-        <Button />
+        <Button className={styles.btn}/>
       </Center>
     </form>
   );

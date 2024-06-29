@@ -3,6 +3,7 @@ import { Button } from "../button/index.js";
 import { Modal } from "../modal/index.js";
 import styles from "./index.module.css";
 import { Center } from "../center/index.js";
+import { Rent } from "../rent/index.js";
 
 export const Content = () => {
   const [showModal, setShowModal] = useState(false);
@@ -12,6 +13,7 @@ export const Content = () => {
   const onModalClose = useCallback(() => setShowModal(false), []);
 
   return (
+    <>
     <Center>
     <div className={styles.wrapper}>
       <div className={styles.blok1} id="block">
@@ -33,6 +35,7 @@ export const Content = () => {
           <br /> ✓ туристический коврик;
           <br /> ✓ спальный мешок.
         </p>
+        <Center>
         {
           <Button
             onClick={() => {
@@ -40,6 +43,7 @@ export const Content = () => {
             }}
           />
         }
+        </Center>
         {showModal && <Modal isOpen={showModal} onClose={onModalClose} />}
       </div>
 
@@ -58,6 +62,7 @@ export const Content = () => {
           <br /> ✓ спасательный жилет;
           <br /> ✓ чай, кофе и сладости.
         </p>
+        <Center>
         {
           <Button
             onClick={() => {
@@ -65,6 +70,7 @@ export const Content = () => {
             }}
           />
         }
+        </Center>
         {showModal && <Modal isOpen={showModal} onClose={onModalClose} />}
       </div>
 
@@ -79,6 +85,7 @@ export const Content = () => {
           <br /> ✓ место в байдарке;
           <br /> ✓ спасательный жилет; <br /> ✓ чай, кофе и сладости.
         </p>
+        <Center>
         {
           <Button
             onClick={() => {
@@ -86,6 +93,7 @@ export const Content = () => {
             }}
           />
         }
+        </Center>
         {showModal && <Modal isOpen={showModal} onClose={onModalClose} />}
       
 
@@ -104,7 +112,7 @@ export const Content = () => {
           <br /> ✓ спасательный жилет. 
           <br /> ✓ чай, кофе и сладости.
         </p>
-
+        <Center>
         {
           <Button
             onClick={() => {
@@ -112,9 +120,12 @@ export const Content = () => {
             }}
           />
         }
+        </Center>
         {showModal && <Modal isOpen={showModal} onClose={onModalClose} />}
       </div>
     </div>
     </Center>
+    <Rent />
+    </>
   );
 };

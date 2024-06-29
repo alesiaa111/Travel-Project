@@ -1,15 +1,14 @@
 
 .modal {
-    position: fixed;
+    position:fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     padding: 15px;
     background-color: #1d5799;
     box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
-    border-radius: 10px;
+    border-radius: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-radius: 10px;
     position: absolute;
 
 }
