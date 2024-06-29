@@ -2,7 +2,7 @@
   
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  background-color: black;
+  background-color: #8c959e;
   border: 1px solid lightgray;
   border-color: #000;
   transition: all 0.3s ease-in-out;
@@ -14,10 +14,10 @@
   color: white;
   font-size: 24px;
   padding: 5px;
-};
+}
 
 .btn:hover {
   background-color: white;
   border-color: black;
   color: black;
-};
+}
