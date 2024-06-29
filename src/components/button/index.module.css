@@ -1,6 +1,8 @@
 .btn {
+  
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+  background-color: black;
   border: 1px solid lightgray;
   border-color: #000;
   transition: all 0.3s ease-in-out;
@@ -9,13 +11,13 @@
   outline: none;
   cursor: pointer;
   min-width: 200px;
-  color: #2d2d2d;
+  color: white;
   font-size: 24px;
   padding: 5px;
 };
 
 .btn:hover {
-  background-color: #706a6a;
-  border-color: #777777;
-  color: white;
+  background-color: white;
+  border-color: black;
+  color: black;
 };

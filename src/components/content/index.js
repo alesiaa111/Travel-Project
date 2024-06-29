@@ -15,9 +15,14 @@ export const Content = ({ onClick }) => {
         {<Button onClick={() => {setShowModal(toggler)}} />}
          {showModal &&  (
           <Modal isOpen={showModal}>
-            <div>Заказать звонок</div>
+          <div className={styles.modal}>
+            <div className={styles.title}>
+            <span>Остались вопросы?</span>
+            <span>Оставьте Ваш номер и мы перезвоним Вам прямо сейчас!</span>
+          </div>
+          </div>
           </Modal>
-         )}
+         )};
       </div>
       <div>
         <h2>Корпоративные сплавы</h2>

@@ -1,6 +1,7 @@
 .form {
-    background-color: #fff;
+    background-color: #1d5799;
     padding: 10px;
+    color:white;
 }
 
 .field > *{
@@ -15,7 +16,7 @@
 
 .field > input {
     border-radius: 8px;
-    width: 100%;
+    width: 95%;
     outline: none;
     border: 1px solid lightgray;
     padding: 8px;
@@ -50,4 +51,5 @@
 
 .form > button { 
     margin-top: 20px;
+    margin: 0 auto;
 }
