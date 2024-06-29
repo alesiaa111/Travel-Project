@@ -5,7 +5,7 @@ import styles from "./index.module.css";
 import { Center } from "../center/index.js";
 import { Rent } from "../rent/index.js";
 
-export const Content = () => {
+export const Main = () => {
   const [showModal, setShowModal] = useState(false);
 
   const toggler = (prev) => !prev;
@@ -28,9 +28,13 @@ export const Content = () => {
           двухдневные, трехдневные сплавы с питанием, походной баней. В
           стоимость входит:
           <br /> ✓ разработка маршрута;
-          <br /> ✓ доставка снаряжения к месту старта; <br /> ✓ сопровождение
-          инструкторами; <br /> ✓ питание на маршруте; <br /> ✓ место в
-          байдарке; <br /> ✓ спасательный жилет;
+          <br /> ✓ доставка снаряжения к месту старта;
+           <br /> ✓ сопровождение
+          инструкторами; 
+          <br /> ✓ питание на маршруте; 
+          <br /> ✓ место в
+          байдарке; 
+          <br /> ✓ спасательный жилет;
           <br /> ✓ место в палатке;
           <br /> ✓ туристический коврик;
           <br /> ✓ спальный мешок.
