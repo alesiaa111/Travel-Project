@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styles from './menu.module.css';
+import styles from './index.module.css';
 
 
 export const Menu = () => {
@@ -10,17 +10,20 @@ export const Menu = () => {
 
     return (
         <>
-            <h1>
-                <NavLink to='/' className={getActiveClassName}>
-                    Main
+            <div className={styles.nav}>
+                <NavLink to='/header' className={getActiveClassName}>
+                    Главная
                 </NavLink>
-                <NavLink to='/categories' className={getActiveClassName}>
-                    Categories
+                <NavLink to='/main' className={getActiveClassName}>
+                    Услуги
                 </NavLink>
-                <NavLink to='/post' className={getActiveClassName}>
-                    Post
+                <NavLink to='/rent' className={getActiveClassName}>
+                    Аренда
                 </NavLink>
-            </h1>
+                <NavLink to='/footer' className={getActiveClassName}>
+                    Контакты
+                </NavLink>
+            </div>
             <hr/>
         </>
     );
