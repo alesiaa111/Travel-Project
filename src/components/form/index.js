@@ -26,8 +26,12 @@ export const Form = () => {
         <input
           type="text"
           id="name"
-          {...register("name", {
+          {...register("name",{
             required: true,
+            minLength: {
+              value: 2,
+              message: "Неверное имя",
+            },
           })}
         />
       </div>
@@ -41,16 +45,12 @@ export const Form = () => {
           type="phone"
           id="phone"
           {...register("phone", {
-            minLength: {
-              value: 14,
-              message: "length should be = 14",
-            },
-            required: { value: true, 
+            required:{ value: true, message: "Заполните поле" },
               pattern: {
-                value: /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/,
-                message: "incorrect email",
-              }},
-          })}
+                value: /^(\+375|80)(29|25|44|33)(\d{3})(\d{2})(\d{2})$/,
+                message: "Неверный формат номера",
+              }})
+          }
         />
       </div>
       <Center>
