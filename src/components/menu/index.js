@@ -12,16 +12,16 @@ export const Menu = () => {
         <>
             <div className={styles.nav}>
                 <NavLink to='/header' className={getActiveClassName}>
-                    Главная
+                    <span className={styles.navText}>Главная</span>
                 </NavLink>
                 <NavLink to='/main' className={getActiveClassName}>
-                    Услуги
+                    <span className={styles.navText}>Услуги</span>
                 </NavLink>
                 <NavLink to='/rent' className={getActiveClassName}>
-                    Аренда
+                    <span className={styles.navText}>Аренда</span>
                 </NavLink>
                 <NavLink to='/footer' className={getActiveClassName}>
-                    Контакты
+                    <span className={styles.navText}>Контакты</span>
                 </NavLink>
             </div>
             <hr/>

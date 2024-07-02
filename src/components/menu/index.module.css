@@ -1,7 +1,14 @@
 .nav {
-    background-color:black
+    background-color:black;
 }
 
 .active {
+    color:black;
+}
+
+.navText {
     color:white;
+    font-size: 30px;
+    text-decoration: none;
+    margin: 5px;
 }
