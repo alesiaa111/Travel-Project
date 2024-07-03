@@ -4,25 +4,26 @@ import styles from './index.module.css';
 
 
 export const Menu = () => {
-    const getActiveClassName = ({isActive}) => {
-        return isActive ? styles.active : "";
-    }
+    // const getActiveClassName = ({isActive}) => {
+    //     return isActive ? styles.active : "";
+    // }
 
     return (
         <>
             <div className={styles.navbar}>
-                <NavLink to='/' className={getActiveClassName}>
-                    <span className={styles.navText}>Главная</span>
+                <NavLink to='/header' className={styles.navText}>
+                    Главная
                 </NavLink>
-                <NavLink to='/service' className={getActiveClassName}>
-                    <span className={styles.navText}>Услуги</span>
+                <NavLink to='/service' className={styles.navText}>
+                    Услуги
                 </NavLink>
-                <NavLink to='/rent' className={getActiveClassName}>
-                    <span className={styles.navText}>Аренда</span>
+                <NavLink to='/rent' className={styles.navText}>
+                    Аренда
                 </NavLink>
-                <NavLink to='/footer' className={getActiveClassName}>
-                    <span className={styles.navText}>Контакты</span>
+                <NavLink  to='/not' className={styles.navText}>
+                    Контакты
                 </NavLink>
+                
             </div>
             <hr/>
         </>

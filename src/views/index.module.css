@@ -1,19 +1,27 @@
-.firstScreen {
+.notFound {
     max-width: 100%;
     height: 80vh;
     display: flex;
     flex-direction: column; 
-    align-items: center;
     overflow: hidden;
-    background-image:url("../../images/FullScreenStart.png");
+    background-image:url("./../images/not-found.png");
     background-color: rgba(0, 0, 0, 1);
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
     box-shadow: inset 0 0 600px;
     margin-bottom: 20px;
-};
+}
 
-.firstTitle{
-    color: black;
+.notFoundTitle{
+    color: white;
+    font-size: 4rem;
+    margin: 50px 10px;
+}
+
+.notFoundLink {
+    color:white;
+    font-size: 30px;
+    text-decoration: none;
+    margin: 20px;
 }
