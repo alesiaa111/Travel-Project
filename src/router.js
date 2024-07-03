@@ -12,13 +12,12 @@ import { NotFound } from "./views/not-found";
 export const Router = () => {
     return (
         <Routes>
-            <Route path="/" element={<Layout/>}>
-                <Route index element={<Service/>}/>
-                {/* <Route path="/posts/*" element={<Posts/>}/> */}
-                <Route path='/service' element={<Service/>}/>
-                <Route path='/header' element={<Header/>}/>
-                <Route path='/rent' element={<Rent/>}/>
-                <Route path="*" element={<NotFound/>}/>
+            <Route path="/" element={<Layout />}>
+                <Route index element={<Service />}/>
+                <Route path='/service' element={<Service />}/>
+                <Route path='/header' element={<Header />}/>
+                <Route path='/rent' element={<Rent />}/>
+                <Route path="*" element={<NotFound />}/>
             </Route>
         </Routes>
     );

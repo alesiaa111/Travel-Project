@@ -1,14 +1,30 @@
-.nav {
-    background-color:black;
-}
-
-.active {
-    color:black;
-}
+.navbar {
+    overflow: hidden;
+    background-color: #756f6f9a;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .navbar > NavLink{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+  
+  .navbar > NavLink:hover {
+    background: #ddd;
+    color: black;
+  }
 
 .navText {
     color:white;
     font-size: 30px;
     text-decoration: none;
     margin: 5px;
+    text-decoration: none;
 }

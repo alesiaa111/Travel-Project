@@ -4,6 +4,7 @@ import { Modal } from "../modal/index.js";
 import styles from "./index.module.css";
 import { Center } from "../center/index.js";
 import { Rent } from "../rent/index.js";
+import { Header } from "../header/index.js";
 
 export const Service = () => {
   const [showModal, setShowModal] = useState(false);

@@ -10,11 +10,11 @@ export const Menu = () => {
 
     return (
         <>
-            <div className={styles.nav}>
-                <NavLink to='/header' className={getActiveClassName}>
+            <div className={styles.navbar}>
+                <NavLink to='/' className={getActiveClassName}>
                     <span className={styles.navText}>Главная</span>
                 </NavLink>
-                <NavLink to='/main' className={getActiveClassName}>
+                <NavLink to='/service' className={getActiveClassName}>
                     <span className={styles.navText}>Услуги</span>
                 </NavLink>
                 <NavLink to='/rent' className={getActiveClassName}>
