@@ -4,9 +4,6 @@ import styles from './index.module.css';
 
 
 export const Menu = () => {
-    // const getActiveClassName = ({isActive}) => {
-    //     return isActive ? styles.active : "";
-    // }
 
     return (
         <>
@@ -20,8 +17,8 @@ export const Menu = () => {
                 <NavLink to='/rent' className={styles.navText}>
                     Аренда
                 </NavLink>
-                <NavLink  to='/not' className={styles.navText}>
-                    Контакты
+                <NavLink  to='/rivers' className={styles.navText}>
+                    Машруты
                 </NavLink>
                 
             </div>

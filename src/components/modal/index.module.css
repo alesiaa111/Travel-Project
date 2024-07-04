@@ -10,7 +10,6 @@
     box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
     border-radius: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: absolute;
 
 }
 .title {
@@ -20,18 +19,12 @@
     flex-direction: column;
     gap:10px;
     font-size:30px;
-};
-
-.header {
-    position: absolute;
-    margin-right: 20px;
-    border-bottom: 1px solid lightgray;
-    padding-bottom: 10px;
 }
+
 
 .closeBtn {
     position: relative;
     left: 96%;
     color:white;
     cursor: pointer;  
-};
+}

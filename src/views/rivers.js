@@ -1,6 +1,6 @@
 import React from "react";
 
 
-export const Not = () => {
+export const Rivers = () => {
   
 };
