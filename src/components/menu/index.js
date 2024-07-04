@@ -8,6 +8,7 @@ export const Menu = () => {
     return (
         <>
             <div className={styles.navbar}>
+                <div>
                 <NavLink to='/header' className={styles.navText}>
                     Главная
                 </NavLink>
@@ -20,9 +21,13 @@ export const Menu = () => {
                 <NavLink  to='/rivers' className={styles.navText}>
                     Машруты
                 </NavLink>
-                
+                </div>
+
+                <div className={styles.menu_phone}>   
+                +375(25) 655-54-05 <br />
+                +375(29) 114-52-20 
+                </div>
             </div>
-            <hr/>
-        </>
+      </>
     );
 };

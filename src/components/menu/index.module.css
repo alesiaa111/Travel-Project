@@ -1,7 +1,11 @@
+
 .navbar {
     overflow: hidden;
     background-color: #756f6f9a;
     position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     top: 0;
     width: 100%;
   }
@@ -19,4 +23,10 @@
   .navText:hover {
     background: #ddd;
     color: black;
+  }
+
+  .menu_phone{
+    color:white;
+    font-size: 20px;
+    margin-right: 20px;
   }
