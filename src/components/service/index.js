@@ -16,7 +16,7 @@ export const Service = () => {
   return (
     <>
     <Header />
-    <Center>
+  
     <div className={styles.wrapper}>
       <div className={styles.blok1} id="block">
         <div className={styles.price}>
@@ -130,7 +130,7 @@ export const Service = () => {
         {showModal && <Modal isOpen={showModal} onClose={onModalClose} />}
       </div>
     </div>
-    </Center>
+ 
     <Rent />
     </>
   );
