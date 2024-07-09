@@ -19,7 +19,7 @@ export const Form = () => {
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit(formSubmit)}>
+    <form className={styles.form} onSubmit={handleSubmit(formSubmit) }>
       <div className={styles.field}>
         {errors.name && (
           <div className={styles.error}>{errors.name.message}</div>

@@ -18,7 +18,7 @@ export const Service = () => {
     <Header />
   
     <div className={styles.wrapper}>
-      <div className={styles.blok1} id="block">
+      <div className={styles.blok1} >
         <div className={styles.price}>
           <div className={styles.price1}>Однодневные от 50 pyб</div>
           <div className={styles.price2}>Двухдневные от 200 pyб</div>
@@ -53,7 +53,7 @@ export const Service = () => {
         {showModal && <Modal isOpen={showModal} onClose={onModalClose} />}
       </div>
 
-      <div className={styles.blok2} id="block">
+      <div className={styles.blok2} >
         <div className={styles.price}>
           <div className={styles.price1}>Однодневные от 50 pyб</div>
           <div className={styles.price2}>Двухдневные от 200 pyб</div>
@@ -80,7 +80,7 @@ export const Service = () => {
         {showModal && <Modal isOpen={showModal} onClose={onModalClose} />}
       </div>
 
-      <div className={styles.blok3} id="block">
+      <div className={styles.blok3} >
         <div className={styles.price1}>от 40 pyб</div>
         <h2 className={styles.blok_title}>Вечерние сплавы</h2>
         <p className={styles.blok_text}>
@@ -104,7 +104,7 @@ export const Service = () => {
       
 
       </div>
-      <div className={styles.blok4} id="block">
+      <div className={styles.blok4} >
         <div className={styles.price1}>Стоимость расчитывается индивидуально</div>
         <h2 className={styles.blok_title}>Квесты для детей</h2>
         <p className={styles.blok_text}>
@@ -120,7 +120,7 @@ export const Service = () => {
         </p>
         <Center>
         {
-          <Button
+          <Button 
             onClick={() => {
               setShowModal(toggler);
             }}
