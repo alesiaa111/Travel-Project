@@ -1,11 +1,11 @@
 import React from "react";
 import {Routes, Route} from 'react-router-dom';
 import { Header } from "./components/header";
-import { Rent } from "./components/rent";
-import { Service } from "./components/service";
+import { Rent } from "./views/rent";
+import { Service } from "./components/tour-service";
 import { Layout } from "./views/layout";
 import { NotFound } from "./views/not-found";
-import { Rivers} from "./views/rivers";
+import { Rivers} from "./views/rivers/rivers";
 
 
 
