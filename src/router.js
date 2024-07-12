@@ -2,7 +2,7 @@ import React from "react";
 import {Routes, Route} from 'react-router-dom';
 import { Header } from "./components/header";
 import { Rent } from "./views/rent";
-import { Service } from "./components/tour-service";
+import { Service } from "./components/list-tour-service";
 import { Layout } from "./views/layout";
 import { NotFound } from "./views/not-found";
 import { Rivers} from "./views/rivers/rivers";
