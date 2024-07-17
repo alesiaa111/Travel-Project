@@ -19,13 +19,16 @@
     flex-direction: column;
     text-align: center;
     margin-top: -10px;
-  }
-  
-  .foter_text{
     color:black;
     font-size: 1em;
     padding: 2px;
   }
+  
+  /* .foter_text{
+    color:black;
+    font-size: 1em;
+    padding: 2px;
+  } */
   
   .footer_favicon {
       max-width: 100%;

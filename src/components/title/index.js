@@ -7,5 +7,5 @@ import cn from "classnames";
  */
 
 export const Title = ({ size = "s", title }) => {
-  return <div  className={cn(styles.title, styles[size])}>{title}</div>;
+  return <span className={cn(styles.title, styles[size])}>{title}</span>;
 };

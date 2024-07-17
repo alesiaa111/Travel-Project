@@ -11,10 +11,10 @@ export const Footer = () => {
             <img src={require("../../images/Logo.png")} alt="Сплавы в Гомеле" />
           </div>
           <div className={styles.contact}>
-            <p className={styles.foter_text}>ИП Давыдов А.В.</p>
-            <p className={styles.foter_text}>УНП 491683235</p>
-            <p className={styles.foter_text}>Life +375(25) 655-54-05</p>
-            <p className={styles.foter_text}> A1 +375(29) 114-52-20</p>
+            <p>ИП Давыдов А.В.</p>
+            <p>УНП 491683235</p>
+            <p>Life +375(25) 655-54-05</p>
+            <p> A1 +375(29) 114-52-20</p>
           </div>
           <div className={styles.footer_favicon}>
             <div className={styles.logo1}>

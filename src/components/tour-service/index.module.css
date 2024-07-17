@@ -1,0 +1,11 @@
+.wrapper {
+    margin-left:30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    background-size: cover;
+    color: white;
+    font-size: 20px;
+    line-height: 22px;
+    text-shadow: 0px 0px 2px black;
+  }

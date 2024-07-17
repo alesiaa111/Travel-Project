@@ -1,0 +1,32 @@
+
+.navbar {
+    overflow: hidden;
+    background-color: #756f6f9a;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+  }
+  
+  .navText {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+  
+  .navText:hover {
+    background: #ddd;
+    color: black;
+  }
+
+  .menu_phone{
+    color:white;
+    font-size: 20px;
+    margin-right: 20px;
+  }
