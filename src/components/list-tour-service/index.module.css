@@ -11,72 +11,9 @@
   text-shadow: 0px 0px 2px black;
 }
 
-
 .wraper{
   margin: 0 auto;
-  background-color:black;
+  border-radius:20px;
   padding: 30px;
 }
 
-.blok1 {
-  max-width: 45%;
-  height: 80vh;
-  border-radius: 10px;
-  color:white;
-  margin: 0 auto;
-  margin: 12px;
-  background-image: url("../../images/block1.png");
-  background-size: cover;
-  background-position: center;
-}
-
-.blok2 {
-    max-width: 45%;
-    height: 80vh;
-    border-radius: 10px;
-    color:white;
-    margin: 0 auto;
-    margin: 12px;
-    background-image: url("../../images/block2.png");
-    background-size: cover;
-    background-position: center;
-}
-
-.blok3 {
-  max-width: 45%;
-  height: 80vh;
-  border-radius: 10px;
-  color:white;
-  margin: 0 auto;
-  margin: 12px;
-  background-image: url("../../images/block3.png");
-  background-size: cover;
-  background-position: center;
-}
-
-
-.blok4 {
-    max-width: 45%;
-    height: 80vh;
-    border-radius: 10px;
-    color:white;
-    margin: 0 auto;
-    margin: 12px;
-    background-image: url("../../images/block4.png");
-    background-size: cover;
-    background-position: center;
-  }
-
-.blok_title {
-  color: white;
-  padding-top: 10px;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 1.3em;
-  line-height: 25px;
-}
-
-.blok_text {
-  max-width: 100%;
-  padding: 10px;
-}

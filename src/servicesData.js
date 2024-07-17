@@ -3,6 +3,9 @@ import block1 from './images/block1.png';
 import block2 from './images/block2.png';
 import block3 from './images/block3.png';
 import block4 from './images/block4.png';
+import block5 from './images/block5.png';
+import block6 from './images/block6.png';
+import block7 from './images/block7.png';
 
 export const servicesData = [
   {
@@ -38,20 +41,20 @@ export const servicesData = [
     title: "Двухдневные сплавы",
     serviceType:
       "Организовываем сборные группы на двухдневный сплав. Включено полноценное питание, палатка, коврик, спальник и сопровождениям инструктарами",
-    imageUrl: "./images/block4.png"
+    imageUrl: block5
   },
   {
     price: "от 270 руб.",
     title: "Двухдневные корпоративные сплавы",
     serviceType:
       "Организовываем корпоративные группы на двухдневный сплав. Включено полноценное питание, палатка, коврик, спальник и сопровождениям инструктарами",
-    imageUrl: "./images/block4.png"
+    imageUrl: block6
   },
   {
     price: "Цена договорная",
     title: "Квесты для детей",
     serviceType:
       "Организовываем квесты для детей. В программу входит: поиск сокровищ по карте вместе с пиратом, вкусные подарки и сопровождениям инструктарами",
-    imageUrl: "./images/block4.png"
+    imageUrl: block7
   },
 ];
