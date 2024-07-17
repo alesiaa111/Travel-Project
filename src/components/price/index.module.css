@@ -1,0 +1,9 @@
+.price {
+    max-width: max-content;
+    color: black;
+    font-weight: bold;
+    background-color: yellow;
+    margin: 5px;
+    padding: 0 5px;
+    text-shadow: none;
+  }

@@ -1,0 +1,19 @@
+.contener {
+  margin: 30px 20px;
+  display: grid;
+  justify-content: center;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, 500px);
+  background-size: cover;
+  color: white;
+  font-size: 20px;
+  line-height: 22px;
+  text-shadow: 0px 0px 2px black;
+}
+
+.wraper{
+  margin: 0 auto;
+  border-radius:20px;
+  padding: 30px;
+}
+

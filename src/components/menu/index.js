@@ -4,27 +4,30 @@ import styles from './index.module.css';
 
 
 export const Menu = () => {
-    const getActiveClassName = ({isActive}) => {
-        return isActive ? styles.active : "";
-    }
 
     return (
         <>
-            <div className={styles.nav}>
-                <NavLink to='/header' className={getActiveClassName}>
+            <div className={styles.navbar}>
+                <div>
+                <NavLink to='/header' className={styles.navText}>
                     Главная
                 </NavLink>
-                <NavLink to='/main' className={getActiveClassName}>
+                <NavLink to='/service' className={styles.navText}>
                     Услуги
                 </NavLink>
-                <NavLink to='/rent' className={getActiveClassName}>
+                <NavLink to='/rent' className={styles.navText}>
                     Аренда
                 </NavLink>
-                <NavLink to='/footer' className={getActiveClassName}>
-                    Контакты
+                <NavLink  to='/rivers' className={styles.navText}>
+                    Машруты
                 </NavLink>
+                </div>
+
+                <div className={styles.menu_phone}>   
+                +375(25) 655-54-05 <br />
+                +375(29) 114-52-20 
+                </div>
             </div>
-            <hr/>
-        </>
+      </>
     );
 };
