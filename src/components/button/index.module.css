@@ -4,7 +4,7 @@
   background-color: #8c959e;
   border: 1px solid lightgray;
   border-color: #000;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
   border-radius: 6px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   outline: none;
