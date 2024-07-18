@@ -10,16 +10,21 @@
     background-position:center;
     box-shadow: inset 0 0 600px;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .notFoundTitle{
-    color: white;
+    top:50px;
+    position: absolute;
+    color: black;
     font-size: 4rem;
     margin: 50px 10px;
 }
 
 .notFoundLink {
-    color:white;
+    top:20px;
+    position: absolute;
+    color:black;
     font-size: 30px;
     text-decoration: none;
     margin: 20px;
