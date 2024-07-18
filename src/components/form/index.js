@@ -19,12 +19,12 @@ export const Form = () => {
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit(formSubmit) }>
+    <form className={styles.form} onSubmit={handleSubmit(formSubmit)}>
       <div className={styles.field}>
         {errors.name && (
           <div className={styles.error}>{errors.name.message}</div>
         )}
-         <input
+        <input
           placeholder="Ваше имя"
           type="text"
           name="name"
@@ -41,7 +41,7 @@ export const Form = () => {
         {errors.phone && (
           <div className={styles.error1}>{errors.phone.message}</div>
         )}
- 
+
         <input
           placeholder="Ваш номер +375"
           type="phone"
@@ -56,7 +56,7 @@ export const Form = () => {
         />
       </div>
       <Center>
-        <Button className={styles.btn}/>
+        <Button className={styles.btn} text='Записаться' />
       </Center>
     </form>
   );

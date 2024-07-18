@@ -5,13 +5,13 @@
   gap: 10px;
   grid-template-columns: repeat(auto-fill, 500px);
   background-size: cover;
-  color: white;
+  color: #fff;
   font-size: 20px;
   line-height: 22px;
-  text-shadow: 0px 0px 2px black;
+  text-shadow: 0px 0px 2px #000;
 }
 
-.wraper{
+.wrapper{
   margin: 0 auto;
   border-radius:20px;
   padding: 30px;
