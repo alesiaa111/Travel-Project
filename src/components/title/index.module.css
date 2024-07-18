@@ -1,0 +1,22 @@
+.title {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  padding-top: 10px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 25px;
+}
+
+.s {
+  font-size: 1.5em;
+  padding: 5px 2px;
+}
+.m {
+  font-size: 2em;
+  padding: 15px 8px;
+}
+
+.xl {
+  font-size: 3em;
+  padding: 15px 8px;
+}

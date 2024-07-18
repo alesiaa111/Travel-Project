@@ -19,18 +19,17 @@ export const Form = () => {
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit(formSubmit)}>
+    <form className={styles.form} onSubmit={handleSubmit(formSubmit) }>
       <div className={styles.field}>
         {errors.name && (
           <div className={styles.error}>{errors.name.message}</div>
         )}
-        {/* <label htmlFor="name">Ваше имя</label> */}
-        <input
+         <input
           placeholder="Ваше имя"
           type="text"
           name="name"
           {...register("name", {
-            required: true,
+            required: { value: true, message: "Заполните поле" },
             minLength: {
               value: 2,
               message: "Неверное имя",
@@ -40,9 +39,9 @@ export const Form = () => {
       </div>
       <div className={styles.field}>
         {errors.phone && (
-          <div className={styles.error}>{errors.phone.message}</div>
+          <div className={styles.error1}>{errors.phone.message}</div>
         )}
-        {/* <label htmlFor="phone">Ваш номер телефона</label> */}
+ 
         <input
           placeholder="Ваш номер +375"
           type="phone"
@@ -51,7 +50,7 @@ export const Form = () => {
             required: { value: true, message: "Заполните поле" },
             pattern: {
               value: /^(\+375|80)(29|25|44|33)(\d{3})(\d{2})(\d{2})$/,
-              message: "Неверный формат номера",
+              message: "Неверный формат",
             },
           })}
         />
