@@ -8,10 +8,14 @@ import { Center } from "../center/index.js";
 
 export const TourService = ({
   id,
+  userName,
+  phone,
   price,
   title,
   serviceType,
   imageUrl,
+  onClick,
+  formSubmit
 }) => {
   const [showModal, setShowModal] = useState(false);
 
@@ -37,7 +41,7 @@ export const TourService = ({
         <Button
           text="Записаться"
           onClick={() => {
-            onClick = { handleFormSubmit };
+            onClick = {handleFormSubmit};
           }}
         />
       </Center>
