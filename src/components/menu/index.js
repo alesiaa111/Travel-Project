@@ -34,8 +34,8 @@ export const Menu = () => {
         </div>
 
         <div className={styles.menu_phone}>
-          +375(25) 655-54-05 <br /> // TODO: убрать br, обернуть и сверстать span'ами
-          +375(29) 114-52-20
+          <span>+375(25) 655-54-05 </span>
+          <span>+375(29) 114-52-20 </span>
         </div>
       </div>
     </>
