@@ -9,7 +9,7 @@ import { Center } from "../center/index.js";
 
 
 
-export const TourService = ({price, title, serviceType, imageUrl}) => {
+export const TourService = ({price, title, text, serviceType, imageUrl}) => {
  const [showModal, setShowModal] = useState(false);
 
   const toggler = (prev) => !prev;
@@ -24,7 +24,7 @@ export const TourService = ({price, title, serviceType, imageUrl}) => {
             <Title title={title} />
             <p>{serviceType}</p>
             <Center>
-            <Button
+            <Button text= "Записаться"
             onClick={() => {
               setShowModal(toggler);
             }}
