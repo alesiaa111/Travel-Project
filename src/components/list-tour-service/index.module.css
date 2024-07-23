@@ -15,5 +15,7 @@
   margin: 0 auto;
   border-radius:20px;
   padding: 30px;
+  background-size: "cover";
+  width: "500px";
 }
 

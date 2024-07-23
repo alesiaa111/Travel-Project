@@ -9,6 +9,7 @@ import block7 from './images/block7.png';
 
 export const servicesData = [
   {
+    id: "one-day",
     price: "от 60 руб.",
     title: "Однодневные сплавы",
     serviceType:
@@ -16,6 +17,7 @@ export const servicesData = [
     imageUrl: block1
   },
   {
+    id: "one-day-corporate",
     price: "от 60 руб.",
     title: "Однодневные корпоративные сплавы",
     serviceType:
@@ -23,6 +25,7 @@ export const servicesData = [
     imageUrl: block2
   },
   {
+    id: "express",
     price: "от 40 руб.",
     title: "Экспресс сплавы",
     serviceType:
@@ -30,6 +33,7 @@ export const servicesData = [
     imageUrl: block3
   },
   {
+    id: "evening",
     price: "от 40 руб.",
     title: "Вечерние сплавы",
     serviceType:
@@ -37,6 +41,7 @@ export const servicesData = [
     imageUrl: block4
   },
   {
+    id: "two-days",
     price: "от 270 руб.",
     title: "Двухдневные сплавы",
     serviceType:
@@ -44,6 +49,7 @@ export const servicesData = [
     imageUrl: block5
   },
   {
+    id: "two-days-corporate",
     price: "от 270 руб.",
     title: "Двухдневные корпоративные сплавы",
     serviceType:
@@ -51,6 +57,7 @@ export const servicesData = [
     imageUrl: block6
   },
   {
+    id: "quest",
     price: "Цена договорная",
     title: "Квесты для детей",
     serviceType:
