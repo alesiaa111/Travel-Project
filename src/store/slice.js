@@ -1,35 +1,32 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { getTourServices } from "./async-action";
 
 
 const initialState = {
-    services: [],
-    isLoading: false,
+    tourServices: [],
     error: null,
 };
 
 
 export const tourServiceSlice = createSlice({
-  name: "tourService",
+  name: "tourServiceSlice",
   initialState,
   reducers: {
-    setServices: (state, action) => {
-      state.services = action.payload;
-    },
-    setIsLoading (state, action) {
-        state.isLoading = action.payload;
+    setTourServices: (state, action) => {
+      state.tourServices = action.payload;
     }
   },
   extraReducers: (builder) => {
-    builder.addCase(setServices.fulfilled, (state, action) => {
-        state.users = action.payload;
-        state.isLoading = false;
+    builder.addCase(getTourServices.fulfilled, (state, action) => {
+        state.tourServices = action.payload;
+        
     });
-    builder.addCase(setServices.rejected, (state, action) => {
+    builder.addCase(getTourServices.rejected, (state, action) => {
         state.error = action.payload;
-        state.isLoading = false;
+        
     });
 }
 });
 
-export const {setUsers, setIsLoading} = userSlice.actions;
-export default userSlice.reducer;
+export const { setTourServices } = tourServiceSlice.actions;
+export default tourServiceSlice.reducer;

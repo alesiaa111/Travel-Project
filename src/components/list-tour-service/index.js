@@ -1,9 +1,15 @@
 import React from "react";
 import styles from "./index.module.css";
-import { servicesData } from "../../servicesData.js";
+// import { servicesData } from "../../servicesData.js";
+import { useSelector } from 'react-redux'
 import { TourService } from "../tour-service/index.js";
+import { getTourServices } from ".././store/selectors"
 
 export const ListTourService = () => {
+
+const servicesData = useSelector(getTourServices)
+
+
   return (
     <div className={styles.contener}>
       {servicesData.map((props) => {
