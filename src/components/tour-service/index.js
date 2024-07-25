@@ -25,7 +25,6 @@ export const TourService = ({
 
   const handleFormSubmit = () => {
     setShowModal(toggler);
-    // Здесь можно передать id в компонент Form
     formSubmit({ userName, phone, id });
   };
 

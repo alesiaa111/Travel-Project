@@ -3,8 +3,7 @@ import { useForm } from "react-hook-form";
 import { Button } from "../button";
 import styles from "./index.module.css";
 import { Center } from "../center";
-import * as firebase from 'firebase/app';
-import 'firebase/database';
+import { database, ref, set } from '../firebase';
 
 export const Form = () => {
   const {
@@ -14,21 +13,20 @@ export const Form = () => {
     formState: { errors },
   } = useForm();
 
-  const database = firebase.database();
-
   const formSubmit = (formData) => {
     console.log(formData);
-    database.ref('users/' + formData.id).set({
+    const newUserRef = ref(database, "users/" + formData.id);
+    set(newUserRef, {
       userName: formData.userName,
-      phone: formData.phone
+      phone: formData.phone,
     })
-    .then(() => {
-      console.log('Данные успешно отправлены на сервер');
-      reset();
-    })
-    .catch((error) => {
-      console.error('Ошибка при отправке данных:', error);
-    });
+      .then(() => {
+        console.log("Данные успешно отправлены на сервер");
+        reset();
+      })
+      .catch((error) => {
+        console.error("Ошибка при отправке данных:", error);
+      });
     reset();
   };
 

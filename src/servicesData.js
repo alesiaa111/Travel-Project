@@ -1,11 +1,11 @@
 import React from "react";
-import block1 from './images/block1.png';
-import block2 from './images/block2.png';
-import block3 from './images/block3.png';
-import block4 from './images/block4.png';
-import block5 from './images/block5.png';
-import block6 from './images/block6.png';
-import block7 from './images/block7.png';
+import block1 from "./images/block1.png";
+import block2 from "./images/block2.png";
+import block3 from "./images/block3.png";
+import block4 from "./images/block4.png";
+import block5 from "./images/block5.png";
+import block6 from "./images/block6.png";
+import block7 from "./images/block7.png";
 
 export const servicesData = [
   {
@@ -14,7 +14,7 @@ export const servicesData = [
     title: "Однодневные сплавы",
     serviceType:
       "Организовываем сборные группы на дневные сплавы выходного дня 4-5 часов с питанием и сопровождением инструктарами",
-    imageUrl: block1
+    imageUrl: block1,
   },
   {
     id: "one-day-corporate",
@@ -22,7 +22,7 @@ export const servicesData = [
     title: "Однодневные корпоративные сплавы",
     serviceType:
       "Организовываем корпоративные сплавы выходного дня 4-5 часов с питанием и сопровождением инструктарами",
-    imageUrl: block2
+    imageUrl: block2,
   },
   {
     id: "express",
@@ -30,7 +30,7 @@ export const servicesData = [
     title: "Экспресс сплавы",
     serviceType:
       "Организовываем сборные группы на дневные сплавы выходного дня 3 часа со сладким перекусом и сопровождением инструктарами",
-    imageUrl: block3
+    imageUrl: block3,
   },
   {
     id: "evening",
@@ -38,7 +38,7 @@ export const servicesData = [
     title: "Вечерние сплавы",
     serviceType:
       "Организовываем сборные группы на вечерние сплавы 3 часа с питанием и сопровождением инструктарами",
-    imageUrl: block4
+    imageUrl: block4,
   },
   {
     id: "two-days",
@@ -46,7 +46,7 @@ export const servicesData = [
     title: "Двухдневные сплавы",
     serviceType:
       "Организовываем сборные группы на двухдневный сплав. Включено полноценное питание, палатка, коврик, спальник и сопровождениям инструктарами",
-    imageUrl: block5
+    imageUrl: block5,
   },
   {
     id: "two-days-corporate",
@@ -54,7 +54,7 @@ export const servicesData = [
     title: "Двухдневные корпоративные сплавы",
     serviceType:
       "Организовываем корпоративные группы на двухдневный сплав. Включено полноценное питание, палатка, коврик, спальник и сопровождениям инструктарами",
-    imageUrl: block6
+    imageUrl: block6,
   },
   {
     id: "quest",
@@ -62,6 +62,6 @@ export const servicesData = [
     title: "Квесты для детей",
     serviceType:
       "Организовываем квесты для детей. В программу входит: поиск сокровищ по карте вместе с пиратом, вкусные подарки и сопровождениям инструктарами",
-    imageUrl: block7
+    imageUrl: block7,
   },
 ];
