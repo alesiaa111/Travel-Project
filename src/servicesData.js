@@ -1,4 +1,5 @@
 import React from "react";
+
 import block1 from "./images/block1.png";
 import block2 from "./images/block2.png";
 import block3 from "./images/block3.png";
@@ -7,9 +8,15 @@ import block5 from "./images/block5.png";
 import block6 from "./images/block6.png";
 import block7 from "./images/block7.png";
 
+
+//images храняться gs://travel-project-bc057.appspot.com/image firebase storage
+
+
+
 export const servicesData = [
   {
-    id: "one-day",
+    id:1,
+    serviceId: "one-day",
     price: "от 60 руб.",
     title: "Однодневные сплавы",
     serviceType:
@@ -17,7 +24,8 @@ export const servicesData = [
     imageUrl: block1,
   },
   {
-    id: "one-day-corporate",
+    id:2,
+    serviceId: "one-day-corporate",
     price: "от 60 руб.",
     title: "Однодневные корпоративные сплавы",
     serviceType:
@@ -25,7 +33,8 @@ export const servicesData = [
     imageUrl: block2,
   },
   {
-    id: "express",
+    id:3,
+    serviceId: "express",
     price: "от 40 руб.",
     title: "Экспресс сплавы",
     serviceType:
@@ -33,7 +42,8 @@ export const servicesData = [
     imageUrl: block3,
   },
   {
-    id: "evening",
+    id:4,
+    serviceId: "evening",
     price: "от 40 руб.",
     title: "Вечерние сплавы",
     serviceType:
@@ -41,7 +51,8 @@ export const servicesData = [
     imageUrl: block4,
   },
   {
-    id: "two-days",
+    id:5,
+    serviceId: "two-days",
     price: "от 270 руб.",
     title: "Двухдневные сплавы",
     serviceType:
@@ -49,7 +60,8 @@ export const servicesData = [
     imageUrl: block5,
   },
   {
-    id: "two-days-corporate",
+    id:6,
+    serviceid: "two-days-corporate",
     price: "от 270 руб.",
     title: "Двухдневные корпоративные сплавы",
     serviceType:
@@ -57,7 +69,8 @@ export const servicesData = [
     imageUrl: block6,
   },
   {
-    id: "quest",
+    id:7,
+    serviceId: "quest",
     price: "Цена договорная",
     title: "Квесты для детей",
     serviceType:
@@ -65,3 +78,5 @@ export const servicesData = [
     imageUrl: block7,
   },
 ];
+
+

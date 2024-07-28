@@ -7,7 +7,7 @@ import { Modal } from "../modal/index.js";
 import { Center } from "../center/index.js";
 
 export const TourService = ({
-  id,
+  serviceId,
   userName,
   phone,
   price,
@@ -25,7 +25,7 @@ export const TourService = ({
 
   const handleFormSubmit = () => {
     setShowModal(toggler);
-    formSubmit({ userName, phone, id });
+    formSubmit({ userName, phone, serviceId });
   };
 
   return (

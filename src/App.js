@@ -1,10 +1,15 @@
 import React from "react";
 import { Router } from "./router";
-
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getTourServices } from "./store/selectors";
 
 export const App = () => {
+  const dispatch = useDispatch();
 
-  return (
-    <Router />
-  );
+  useEffect(() => {
+    dispatch(getTourServices());
+  }, []);
+
+  return <Router />;
 };

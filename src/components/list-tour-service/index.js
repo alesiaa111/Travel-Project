@@ -3,7 +3,7 @@ import styles from "./index.module.css";
 // import { servicesData } from "../../servicesData.js";
 import { useSelector } from 'react-redux'
 import { TourService } from "../tour-service/index.js";
-import { getTourServices } from ".././store/selectors"
+import { getTourServices } from "../../store/selectors"
 
 export const ListTourService = () => {
 
@@ -19,7 +19,7 @@ const servicesData = useSelector(getTourServices)
             style={{
               backgroundImage: `url(${props.imageUrl})`
             }}
-            id={props.id}
+            serviceid={props.serviceid}
             {...props}
             key={props.id}
           />
