@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { Button } from "../button";
 import styles from "./index.module.css";
 import { Center } from "../center";
-import { getDatabase, ref, set } from "firebase/database";
+import { database } from "../../firebase/firebase-config";
 
 
 export const Form = () => {
@@ -15,7 +15,6 @@ export const Form = () => {
   } = useForm();
 
   const formSubmit = (formData) => {
-    const db = getDatabase();
     const newUserRef = ref(db, "users/" + formData.serviceId);
     set(newUserRef, {
       userName: formData.userName,
