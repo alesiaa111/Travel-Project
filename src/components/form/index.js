@@ -3,7 +3,8 @@ import { useForm } from "react-hook-form";
 import { Button } from "../button";
 import styles from "./index.module.css";
 import { Center } from "../center";
-import { database } from "../../firebase/firebase-config";
+import { db } from "../../firebase/firebase-config";
+import { ref, set } from "firebase/firestore";
 
 
 export const Form = () => {
