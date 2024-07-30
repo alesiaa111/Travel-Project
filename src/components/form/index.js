@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { Button } from "../button";
 import styles from "./index.module.css";
 import { Center } from "../center";
+import { getDatabase, ref, set } from "firebase/database";
 
 export const Form = () => {
   const {
@@ -13,22 +14,33 @@ export const Form = () => {
   } = useForm();
 
   const formSubmit = (formData) => {
-    console.log(formData);
-
+    const db = getDatabase();
+    const newUserRef = ref(db, "users/" + formData.serviceId);
+    set(newUserRef, {
+      userName: formData.userName,
+      phone: formData.phone,
+    })
+      .then(() => {
+        console.log("Данные успешно отправлены на сервер");
+        reset();
+      })
+      .catch((error) => {
+        console.error("Ошибка при отправке данных:", error);
+      });
     reset();
   };
 
   return (
     <form className={styles.form} onSubmit={handleSubmit(formSubmit)}>
       <div className={styles.field}>
-        {errors.name && (
-          <div className={styles.error}>{errors.name.message}</div>
+        {errors.userName && (
+          <div className={styles.error}>{errors.userName.message}</div>
         )}
         <input
           placeholder="Ваше имя"
           type="text"
-          name="name"
-          {...register("name", {
+          name="userName"
+          {...register("userName", {
             required: { value: true, message: "Заполните поле" },
             minLength: {
               value: 2,
@@ -56,7 +68,7 @@ export const Form = () => {
         />
       </div>
       <Center>
-        <Button className={styles.btn} text='Записаться' />
+        <Button className={styles.btn} text="Записаться" />
       </Center>
     </form>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import {Routes, Route} from 'react-router-dom';
-import { Header } from "./components/header";
+import { Header } from "./views/header";
 import { Rent } from "./views/rent";
 import { ListTourService } from "./components/list-tour-service";
 import { Layout } from "./views/layout";

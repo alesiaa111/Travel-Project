@@ -12,9 +12,8 @@ export const ListTourService = () => {
             className={styles.wrapper}
             style={{
               backgroundImage: `url(${props.imageUrl})`,
-              backgroundSize: "cover", // TODO: перенести все свойства кроме bgImage в css
-              width: "500px",
             }}
+            serviceid={props.serviceid}
             {...props}
             key={props.id}
           />
