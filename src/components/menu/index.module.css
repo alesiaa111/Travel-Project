@@ -8,6 +8,7 @@
     justify-content: space-between;
     top: 0;
     width: 100%;
+    z-index: 99;
   }
   
   .navText {
