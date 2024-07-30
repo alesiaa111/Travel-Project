@@ -6,7 +6,7 @@ import tour1 from "../../images/tour1.png";
 export const settings = {
   dots: true,
   infinite: true,
-  speed: 600,
+  speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
