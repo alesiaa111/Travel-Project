@@ -1,6 +1,6 @@
-import { Header } from "./components/header";
-import { Rent } from "./views/rent";
-import { ListTourService } from "./components/list-tour-service";
+import { Header } from "../../components/header";
+import { Rent } from "../rent";
+import { ListTourService } from "../../components/list-tour-service";
 
 export const Total = () => {
     return (

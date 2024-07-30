@@ -5,7 +5,7 @@ import styles from "./index.module.css";
 const menu = [
   {
     title: "Главная",
-    link: "/header",
+    link: "/total",
   },
   {
     title: "Услуги",

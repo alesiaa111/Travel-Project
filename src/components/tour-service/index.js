@@ -9,7 +9,7 @@ import { Center } from "../center/index.js";
 
 
 
-export const TourService = ({price, title, text, serviceType, imageUrl}) => {
+export const TourService = ({price, title, serviceType, imageUrl}) => {
  const [showModal, setShowModal] = useState(false);
 
   const toggler = (prev) => !prev;
