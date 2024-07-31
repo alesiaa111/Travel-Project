@@ -11,7 +11,7 @@ export const App = () => {
   useEffect(() => {
     dispatch(addServicesData());
     dispatch(getTourServices());
-  }, []);
+  }, [dispatch]);
 
   return <Router />;
 };

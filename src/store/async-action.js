@@ -1,14 +1,15 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { db } from "../firebase/firebase-config";
-import { collection, doc, setDoc, getDocs } from "firebase/firestore";
+import {
+  getFirestore,
+  collection,
+  doc,
+  setDoc,
+  getDocs,
+} from "firebase/firestore";
 import { servicesDataRef } from "../firebase/set_document";
 
-export const addServiceData = async (service) => {
-  servicesDataRef = collection(db, "servicesData");
-  await setDoc(doc(servicesDataRef, service.serviceId), service);
-  console.log(`Отправка данных: ${JSON.stringify(service)}`);
-};
-
+// Заппись данных о тур-услугах на сервер
 export const addServicesData = createAsyncThunk(
   "addServicesDate",
   async (servicesData, thunkApi) => {
@@ -17,19 +18,37 @@ export const addServicesData = createAsyncThunk(
       servicesData.map(async (service) => {
         await setDoc(doc(servicesDataRef, service.serviceId), service);
       });
-
-      return servicesData; // Возвращаем данные об услугах для дальнейшего использования
+      return servicesData;
     } catch (error) {
-      return thunkApi.rejectWithValue(error.message); // Обработка ошибок
+      console.error("Ошибка при отправке данных:", error);
+      return thunkApi.rejectWithValue("Ошибка при отправке данных");
     }
   }
 );
 
+// Получение данных о тур-услугах с сервера в list-tour-service
 export const getTourServices = createAsyncThunk(
   "getTourServices",
   async (payload, thunkApi) => {
     const querySnapshot = await getDocs(collection(db, "servicesData"));
     const servicesData = querySnapshot.docs.map((doc) => doc.data());
     return thunkApi.fulfillWithValue(servicesData);
+  }
+);
+
+// Отправка формы
+export const submitForm = createAsyncThunk(
+  "form/submit",
+  async (formData, { rejectWithValue }) => {
+    try {
+      db = getFirestore();
+      const newUserRef = doc(db, "users", formData.serviceId);
+      await setDoc(newUserRef, {
+        userName: formData.userName,
+        phone: formData.phone,
+      });
+    } catch (error) {
+      return rejectWithValue(error.message); // Возвращаем ошибку
+    }
   }
 );

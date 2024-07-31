@@ -3,11 +3,11 @@ import styles from "./index.module.css";
 // import { servicesData } from "../../servicesData.js";
 import { useSelector } from 'react-redux'
 import { TourService } from "../tour-service/index.js";
-import { getTourServices } from "../../store/selectors"
+import { getTourServicesFromList } from "../../store/selectors"
 
 export const ListTourService = () => {
 
-const servicesData = useSelector(getTourServices)
+const servicesData = useSelector(getTourServicesFromList)
 
 
   return (
