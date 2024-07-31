@@ -14,20 +14,13 @@
   justify-content: center;
   text-align: center;
   font-family: sans-serif;
-  margin: 20px;
+  margin-top: 30px;
   color: white;
   text-shadow: 0px 0px 2px black;
 }
 
-.rent_title {
-  text-align: center;
-  margin: 15px;
-  font-size: 30px;
-  line-height: 32px;
-}
-
 .rent_text {
-  margin: 5px 20px;
+  margin-top: 30px;
   font-size: 25px;
   line-height: 35px;
 }
@@ -43,7 +36,3 @@ li {
   list-style-type: none;
 }
 
-.li_big {
-  padding: 10px;
-  font-size: 30px;
-}
