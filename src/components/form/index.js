@@ -1,11 +1,12 @@
-import React from "react";
+import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
-import { Button } from "../button";
+import { submitForm } from "../../store/async-action";
 import styles from "./index.module.css";
-import { Center } from "../center";
-import { getDatabase, ref, set } from "firebase/database";
+import { Button } from "../button/index.js";
+import { Center } from "../center/index.js";
 
 export const Form = () => {
+  const dispatch = useDispatch();
   const {
     register,
     handleSubmit,
@@ -13,21 +14,15 @@ export const Form = () => {
     formState: { errors },
   } = useForm();
 
-  const formSubmit = (formData) => {
-    const db = getDatabase();
-    const newUserRef = ref(db, "users/" + formData.serviceId);
-    set(newUserRef, {
-      userName: formData.userName,
-      phone: formData.phone,
-    })
-      .then(() => {
-        console.log("Данные успешно отправлены на сервер");
-        reset();
-      })
-      .catch((error) => {
-        console.error("Ошибка при отправке данных:", error);
-      });
-    reset();
+  const formSubmit = async (formData) => {
+    const resultAction = await dispatch(submitForm(formData));
+
+    if (submitForm.fulfilled.match(resultAction)) {
+      console.log("Данные успешно отправлены на сервер");
+      reset();
+    } else {
+      console.error("Ошибка при отправке данных:", resultAction.payload);
+    }
   };
 
   return (
