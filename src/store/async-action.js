@@ -15,9 +15,11 @@ export const addServicesData = createAsyncThunk(
   async (servicesData, thunkApi) => {
     servicesDataRef = collection(db, "servicesData");
     try {
+      await Promise.all(
       servicesData.map(async (service) => {
         await setDoc(doc(servicesDataRef, service.serviceId), service);
-      });
+      })
+    );
       return servicesData;
     } catch (error) {
       console.error("Ошибка при отправке данных:", error);
@@ -29,17 +31,22 @@ export const addServicesData = createAsyncThunk(
 // Получение данных о тур-услугах с сервера в list-tour-service
 export const getTourServices = createAsyncThunk(
   "getTourServices",
-  async (payload, thunkApi) => {
+  async (_, thunkApi) => {
+    try{
     const querySnapshot = await getDocs(collection(db, "servicesData"));
     const servicesData = querySnapshot.docs.map((doc) => doc.data());
     return thunkApi.fulfillWithValue(servicesData);
+    } catch (error) {
+      console.error("Ошибка при получении данных:", error);
+    return thunkApi.rejectWithValue("Ошибка при получении данных");
   }
+}
 );
 
 // Отправка формы
 export const submitForm = createAsyncThunk(
   "form/submit",
-  async (formData, { rejectWithValue }) => {
+  async (formData, thunkApi) => {
     try {
       db = getFirestore();
       const newUserRef = doc(db, "users", formData.serviceId);
@@ -48,7 +55,8 @@ export const submitForm = createAsyncThunk(
         phone: formData.phone,
       });
     } catch (error) {
-      return rejectWithValue(error.message); // Возвращаем ошибку
+      console.error("Ошибка при отправке данных:", error);
+      return thunkApi.rejectWithValue("Ошибка при отправке данных");
     }
   }
 );

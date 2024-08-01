@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { submitForm } from "../../store/async-action";
 import styles from "./index.module.css";
 import { Button } from "../button/index.js";
-import { Center } from "../center/index.js"
+import { Center } from "../center/index.js";
 
 export const Form = () => {
   const dispatch = useDispatch();
