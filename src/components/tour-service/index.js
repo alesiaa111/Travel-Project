@@ -14,7 +14,6 @@ export const TourService = ({
   title,
   serviceType,
   imageUrl,
-  onClick,
   formSubmit
 }) => {
   const [showModal, setShowModal] = useState(false);

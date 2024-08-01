@@ -9,7 +9,7 @@ import {
 } from "firebase/firestore";
 import { servicesDataRef } from "../firebase/set_document";
 
-// Заппись данных о тур-услугах на сервер
+// Запись данных о тур-услугах на сервер
 export const addServicesData = createAsyncThunk(
   "addServicesDate",
   async (servicesData, thunkApi) => {
@@ -48,7 +48,6 @@ export const submitForm = createAsyncThunk(
   "form/submit",
   async (formData, thunkApi) => {
     try {
-      db = getFirestore();
       const newUserRef = doc(db, "users", formData.serviceId);
       await setDoc(newUserRef, {
         userName: formData.userName,
