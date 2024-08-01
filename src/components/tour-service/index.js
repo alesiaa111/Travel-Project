@@ -25,7 +25,8 @@ export const TourService = ({
 
   const handleFormSubmit = () => {
     setShowModal(toggler);
-    formSubmit({ userName, phone, serviceId });
+    // undefined({ userName, phone, serviceId });
+    // dispatch(subscribe({ userName, phone, serviceId }))
   };
 
   return (
@@ -39,9 +40,7 @@ export const TourService = ({
       <Center>
         <Button
           text="Записаться"
-          onClick={() => {
-            onClick = {handleFormSubmit};
-          }}
+          onClick={handleFormSubmit}
         />
       </Center>
       {showModal && <Modal isOpen={showModal} onClose={onModalClose} />}

@@ -13,6 +13,7 @@ const servicesData = useSelector(getTourServicesFromList)
   return (
     <div className={styles.contener}>
       {servicesData.map((props) => {
+ 
         return (
           <TourService
             className={styles.wrapper}

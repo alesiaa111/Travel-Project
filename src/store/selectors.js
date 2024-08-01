@@ -1,4 +1,4 @@
 
 export const getTourServicesFromList = (state) => {
-  return state.tourServices.servicesData;
+  return state.tourServices.tourServices;
 };
