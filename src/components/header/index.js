@@ -1,17 +1,31 @@
 import React from "react";
-import logoImg from '../../images/Logo.png';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Logo  from "../../images/Logo.png";
 import styles from "./index.module.css";
-
+import { slides, settings } from "../constants/index.js";
 
 export const Header = () => {
   return (
-    <div className={styles.firstScreen}>
-      <img src={logoImg} alt="Logo" />
-      <h1 className={styles.firstTitle}> Организация сплавов в Гомеле</h1>
-      <h2 className={styles.phone_title}>
-      <p>Life +375(25) 655-54-05 </p>
-      <p>A1 +375(29) 114-52-20</p>
-    </h2>
-    </div>
+    <Slider {...settings}>
+      {slides.map((slide, id) => (
+        <div key={id}>
+          <div
+            className={styles.firstScreen}
+            style={{
+              backgroundImage: `url(${slide.imageUrl})`,
+            }}
+          >
+            <img src={Logo} alt="Logo" />
+            <h1 className={styles.firstTitle}>{slide.title}</h1>
+            <div className={styles.phone_title}>
+              <span>Life {slide.phone1}</span>
+              <span>A1 {slide.phone2}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </Slider>
   );
 };
