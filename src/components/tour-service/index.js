@@ -13,6 +13,7 @@ export const TourService = ({
   price,
   title,
   serviceType,
+  onClick,
   imageUrl,
   formSubmit
 }) => {
