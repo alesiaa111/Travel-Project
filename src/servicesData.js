@@ -1,4 +1,3 @@
-import React from "react";
 import block1 from "./images/block1.png";
 import block2 from "./images/block2.png";
 import block3 from "./images/block3.png";

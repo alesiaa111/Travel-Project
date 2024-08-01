@@ -1,4 +1,4 @@
-import React, { useContext, useMemo, memo } from "react";
+import React, {  useMemo, memo } from "react";
 import styles from "./index.module.css";
 import { Form } from "../form";
 import { ModalHeader } from "./modal-header";
