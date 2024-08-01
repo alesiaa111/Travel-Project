@@ -5,7 +5,7 @@ import { Rent } from "./views/rent";
 import { ListTourService } from "./components/list-tour-service";
 import { Layout } from "./views/layout";
 import { NotFound } from "./views/not-found";
-import { Rivers } from "./views/rivers/rivers";
+import { Rivers } from "./views/rivers/index.js";
 
 export const Router = () => {
   return (
