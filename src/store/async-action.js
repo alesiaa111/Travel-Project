@@ -1,11 +1,11 @@
-
-import { collection, doc, getDocs, addDoc } from "firebase/firestore";
-import { db } from "./firebase-config";
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
+import { db } from "../firebase/firebase-config";
 
 export const servicesDataRef = collection(db, "servicesData");
 
 // Запись данных о тур-услугах на сервер 
-export const addService = createAsyncThunk(
+export const addServicesData = createAsyncThunk(
   "addService",
   async (formServiceData, thunkApi) => {
     const servicesDataRef = collection(db, "servicesData");
