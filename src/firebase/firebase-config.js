@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBAthaqMCssAQBIw3n6bHuZiw-EoK6q4nY",
-  authDomain: "travel-project-a2765.firebaseapp.com",
-  projectId: "travel-project-a2765",
-  storageBucket: "travel-project-a2765.appspot.com",
-  messagingSenderId: "809832981561",
-  appId: "1:809832981561:web:5b2f712a0dd80bc98bd9e8",
+  apiKey: "AIzaSyCP-YpUb4rI_vsif3EwwgISxxbs-3seq-Q",
+  authDomain: "travel-cac99.firebaseapp.com",
+  projectId: "travel-cac99",
+  storageBucket: "travel-cac99.appspot.com",
+  messagingSenderId: "879624660012",
+  appId: "1:879624660012:web:9817791b049834dbdcdd89"
 };
 
 const app = initializeApp(firebaseConfig);

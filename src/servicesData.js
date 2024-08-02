@@ -14,7 +14,11 @@ export const servicesData = [
     title: "Однодневные сплавы",
     serviceType:
       "Организовываем сборные группы на дневные сплавы выходного дня 4-5 часов с питанием и сопровождением инструктарами",
+<<<<<<< HEAD
+    imageUrl: block1,
+=======
     imageUrl: "https://firebasestorage.googleapis.com/v0/b/travel-project-a2765.appspot.com/o/image%2FFullScreenStart.png?alt=media&token=342dfde3-5bb1-4b2c-a5da-e2d033a7262b",
+>>>>>>> d5ee0dc583ed465a622881b764bc44800f7473a3
   },
   {
     id: 2,
