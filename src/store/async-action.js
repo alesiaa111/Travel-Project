@@ -57,3 +57,8 @@ export const submitForm = createAsyncThunk(
     }
   }
 );
+
+
+export const subscribe = createAsyncThunk(async () => {
+  // firebase getDoc setDoc addDoc
+})

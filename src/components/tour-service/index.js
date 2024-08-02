@@ -1,4 +1,4 @@
-import React, { useState, useCallback, dispatch, subscribe } from "react";
+import React, { useState, useCallback, dispatch, subcribe } from "react";
 import styles from "./index.module.css";
 import { Price } from "../price/index.js";
 import { Title } from "../title/index.js";
@@ -15,6 +15,7 @@ export const TourService = ({
   serviceType,
   onClick,
   imageUrl,
+  submitForm,
   onSubmit,
 }) => {
   const [showModal, setShowModal] = useState(false);
@@ -25,7 +26,7 @@ export const TourService = ({
 
   const handleFormSubmit = () => {
     setShowModal(toggler);
-    dispatch(subscribe({ userName, phone, serviceId }));
+    dispatch(subcribe({ userName, phone, serviceId }));
   };
 
   return (
@@ -39,10 +40,7 @@ export const TourService = ({
       <Center>
         <Button
           text="Записаться"
-          onClick={() => {
-            onClick = {handleFormSubmit};
-          }}
-          onSubmit={handleFormSubmit}
+          onClick={handleFormSubmit}
         />
       </Center>
       {showModal && <Modal isOpen={showModal} onClose={onModalClose} />}
