@@ -1,26 +1,35 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { submitForm } from "./async-action"; 
 
 export const formSlice = createSlice({
   name: "form",
   initialState: {
-    name: "",
+    userName: "",
     phone: "",
     serviceId: "",
+    error: null, 
   },
   reducers: {
     setFormData(state, action) {
-      const { name, phone, serviceId } = action.payload;
-      state.name = name;
+      const { userName, phone, serviceId } = action.payload;
+      state.userName = userName;
       state.phone = phone;
       state.serviceId = serviceId;
     },
-    clearFormData(state) {
-      state.name = "";
-      state.phone = "";
-      state.serviceId = "";
-    },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(submitForm.fulfilled, (state, action) => {
+        const { userName, phone, serviceId } = action.payload;
+        state.userName = userName;
+        state.phone = phone;
+        state.serviceId = serviceId;
+      })
+      .addCase(submitForm.rejected, (state, action) => {
+        state.error = action.payload;
+      });
   },
 });
 
-export const { setFormData, clearFormData } = formSlice.actions;
+export const { setFormData } = formSlice.actions;
 export default formSlice.reducer;

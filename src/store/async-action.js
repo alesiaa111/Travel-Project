@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 import  { db } from "../firebase/firebase-config";
 
 export const getTourServices = createAsyncThunk(
@@ -15,3 +15,21 @@ export const getTourServices = createAsyncThunk(
       }
     }
   );
+
+
+export const submitForm = createAsyncThunk(
+  "form",
+  async ({ userName, phone, serviceId }, thunkApi) => {
+    try {
+      await addDoc(collection(db, "users"), {
+        userName,
+        phone,
+        serviceId,
+      });
+      return { userName, phone, serviceId };
+    } catch (error) {
+      console.error("Ошибка при отправке данных:", error);
+      return thunkApi.rejectWithValue("Ошибка при отправке данных");
+    }
+  }
+);

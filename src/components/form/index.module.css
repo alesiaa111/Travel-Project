@@ -1,90 +1,80 @@
 .form {
-    background-color: #1d5799;
-    padding: 10px;
-    color:white;
+  background-color: #1d5799;
+  padding: 10px;
+  color: white;
 }
 
-.field > *{
-    display: block;
+.field > * {
+  display: block;
 }
-/* 
-.field > label {
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 22px;
-    margin-bottom: 10px;
-} */
 
 .field > input {
-    margin: 0 auto;
-    border-radius: 8px;
-    width: 70%;
-    outline: none;
-    border: 1px solid lightgray;
-    padding: 8px;
+  margin: 5px auto;
+  border-radius: 8px;
+  width: 70%;
+  outline: none;
+  border: 1px solid lightgray;
+  padding: 8px;
 }
 
 .field {
-    margin-bottom: 15px;
-    position: relative;
+  margin-bottom: 15px;
+  position: relative;
 }
 
 .error {
-    position: absolute;
-    max-width: 90px;
-    left:-10px;
-    bottom: 0;
-    background-color: rgb(214, 112, 43);
-    color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 5px 10px; 
-    border-radius: 10px;
+  position: absolute;
+  max-width: 90px;
+  left: -10px;
+  bottom: 0;
+  background-color: rgb(214, 112, 43);
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5px 10px;
+  border-radius: 10px;
 }
 
 .error::after {
-    content: '';
-    border: 5px solid rgb(214, 112, 43);
-    width: 0;
-    height: 0;
-    top: 40%;
-    transform: translate(-50%) rotate(45deg);
-    left:100%;
-    position: absolute;
+  content: "";
+  border: 5px solid rgb(214, 112, 43);
+  width: 0;
+  height: 0;
+  top: 40%;
+  transform: translate(-50%) rotate(45deg);
+  left: 100%;
+  position: absolute;
 }
 
 .error1 {
-    position: absolute;
-    max-width: 90px;
-    top:-20px;
-    left:-10px;
-    bottom: 0;
-    background-color: rgb(214, 112, 43);
-    color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 5px 10px; 
-    border-radius: 10px;
+  position: absolute;
+  max-width: 90px;
+  top: -20px;
+  left: -10px;
+  bottom: 0;
+  background-color: rgb(214, 112, 43);
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5px 10px;
+  border-radius: 10px;
 }
 
 .error1::after {
-    content: '';
-    border: 5px solid rgb(214, 112, 43);
-    width: 0;
-    height: 0;
-    top: 40%;
-    transform: translate(-50%) rotate(45deg);
-    left:100%;
-    position: absolute;
+  content: "";
+  border: 5px solid rgb(214, 112, 43);
+  width: 0;
+  height: 0;
+  top: 40%;
+  transform: translate(-50%) rotate(45deg);
+  left: 100%;
+  position: absolute;
 }
 
-
-.form > button { 
-    max-width: 50%;
-    margin-top: 20px;
-    margin: 0 auto;
-
+.form > button {
+  max-width: 50%;
+  margin-top: 20px;
+  margin: 0 auto;
 }
 
 .btn {
-    max-width: 40%;
-
+  max-width: 40%;
 }
