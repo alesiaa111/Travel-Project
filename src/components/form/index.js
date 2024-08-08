@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { submitForm } from "../../store/async-action";
 import { addFormUsers } from "../../store/selector";
@@ -23,20 +23,22 @@ export const Form = ({ serviceId }) => {
     dispatch(submitForm());
   }, [dispatch]);
 
+  
+
   const formSubmit = async (data) => {
     try {
       const resultAction = await dispatch(
         submitForm({ userName, phone, serviceId })
       );
 
-      if (submitForm.fulfilled.match(resultAction))
-        alert("Данные успешно отправлены!");
+      if (submitForm.fulfilled.match(resultAction));
+      alert("Данные успешно отправлены!");
       reset();
     } catch (error) {
       alert("Ошибка при отправке данных: " + error.message);
     }
   };
-
+  
   return (
     <>
       <form className={styles.form} onSubmit={handleSubmit(formSubmit)}>
@@ -77,7 +79,11 @@ export const Form = ({ serviceId }) => {
           />
         </div>
         <Center>
-          <Button type="submit" className={styles.btn} text="Записаться" />
+          <Button
+            type="submit"
+            className={styles.btn}
+            text="Записаться"
+          />
         </Center>
       </form>
     </>

@@ -1,4 +1,4 @@
-import React, {  useMemo, memo } from "react";
+import React, { useMemo, memo } from "react";
 import styles from "./index.module.css";
 import { Form } from "../form";
 import { ModalHeader } from "./modal-header";
@@ -12,7 +12,6 @@ export const Modal = memo(({ isOpen, onClose, serviceId }) => {
     return null;
   }
 
-
   return createPortal(
     <ModalContext.Provider value={value}>
       <div className={styles.modal}>
@@ -21,7 +20,7 @@ export const Modal = memo(({ isOpen, onClose, serviceId }) => {
           <h3>Остались вопросы?</h3>
           <span>Оставьте Ваш номер и мы перезвоним Вам прямо сейчас!</span>
         </div>
-        <Form serviceId={serviceId}/>
+        <Form serviceId={serviceId} />
       </div>
     </ModalContext.Provider>,
     document.body
@@ -29,4 +28,3 @@ export const Modal = memo(({ isOpen, onClose, serviceId }) => {
 });
 
 Modal.Header = ModalHeader;
-
