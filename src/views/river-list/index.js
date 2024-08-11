@@ -52,8 +52,21 @@ export const RiverList = () => {
       <Swiper
         slidesPerView={3}
         spaceBetween={10}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+          },
+
+          768: {
+            slidesPerView: 2,
+          },
+
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
         autoplay={{
-          delay: 2000,
+          delay: 1000,
           disableOnInteraction: false,
         }}
         navigation
