@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import * as firebaseui from 'firebaseui';
-import { auth } from '../firebase';
+import { auth } from '../../firebase/firebase-config';
 
 export const FirebaseAuth = () => {
   useEffect(() => {

@@ -33,3 +33,17 @@ export const submitForm = createAsyncThunk(
     }
   }
 );
+
+export const getUserList = createAsyncThunk(
+  "getUserList",
+  async (payload, thunkApi) => {
+    try {
+      const querySnapshot = await getDocs(collection(db, "users"));
+      const users = querySnapshot.docs.map((doc) => doc.data());
+      return thunkApi.fulfillWithValue(users);
+    } catch (error) {
+      console.error("Ошибка при получении данных:", error);
+      return thunkApi.rejectWithValue("Ошибка при получении данных");
+    }
+  }
+);
