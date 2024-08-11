@@ -6,28 +6,12 @@ import { Button } from "../button/index.js";
 import { Modal } from "../modal/index.js";
 import { Center } from "../center/index.js";
 
-export const TourService = ({
-  serviceId,
-  userName,
-  phone,
-  price,
-  title,
-  serviceType,
-  onClick,
-  imageUrl,
-  formSubmit
-}) => {
+export const TourService = ({ serviceId, price, title, serviceType, imageUrl }) => {
   const [showModal, setShowModal] = useState(false);
 
   const toggler = (prev) => !prev;
 
   const onModalClose = useCallback(() => setShowModal(false), []);
-
-  const handleFormSubmit = () => {
-    setShowModal(toggler);
-    // undefined({ userName, phone, serviceId });
-    // dispatch(subscribe({ userName, phone, serviceId }))
-  };
 
   return (
     <div
@@ -40,10 +24,12 @@ export const TourService = ({
       <Center>
         <Button
           text="Записаться"
-          onClick={handleFormSubmit}
+          onClick={() => {
+            setShowModal(toggler);
+          }}
         />
       </Center>
-      {showModal && <Modal isOpen={showModal} onClose={onModalClose} />}
+      {showModal && <Modal isOpen={showModal} onClose={onModalClose} serviceId={serviceId}/>}
     </div>
   );
 };

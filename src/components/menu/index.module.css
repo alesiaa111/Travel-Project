@@ -1,6 +1,7 @@
 .navbar {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
-  background-color: #756f6f9a;
+  background-color: rgb(124, 117, 117);
   position: fixed;
   display: flex;
   flex-direction: row;
@@ -13,7 +14,7 @@
 .navText {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
   padding: 10px 10px;
   text-decoration: none;

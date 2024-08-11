@@ -1,17 +1,16 @@
-import React, {  useMemo, memo } from "react";
+import React, { useMemo, memo } from "react";
 import styles from "./index.module.css";
 import { Form } from "../form";
 import { ModalHeader } from "./modal-header";
 import { ModalContext } from "./context";
 import { createPortal } from "react-dom";
 
-export const Modal = memo(({ isOpen, onClose }) => {
+export const Modal = memo(({ isOpen, onClose, serviceId }) => {
   const value = useMemo(() => ({ onClose }), [onClose]);
 
   if (!isOpen) {
     return null;
   }
-
 
   return createPortal(
     <ModalContext.Provider value={value}>
@@ -21,7 +20,7 @@ export const Modal = memo(({ isOpen, onClose }) => {
           <h3>Остались вопросы?</h3>
           <span>Оставьте Ваш номер и мы перезвоним Вам прямо сейчас!</span>
         </div>
-        <Form />
+        <Form serviceId={serviceId} />
       </div>
     </ModalContext.Provider>,
     document.body
@@ -29,4 +28,3 @@ export const Modal = memo(({ isOpen, onClose }) => {
 });
 
 Modal.Header = ModalHeader;
-
