@@ -1,7 +1,8 @@
 .wrapper {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   max-width: 100%;
   height: 85vh;
-  background-image: url("../../images/rent.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/travel-cac99.appspot.com/o/image%2Frent.png?alt=media&token=f360704f-0112-455b-92d6-2f7b0febb7f3");
   background-size: cover;
   background-position: center;
   margin: 15px;
@@ -35,4 +36,3 @@
 li {
   list-style-type: none;
 }
-

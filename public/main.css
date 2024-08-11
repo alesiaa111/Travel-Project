@@ -1,0 +1,9 @@
+*,
+*::after,
+*::before {
+  padding: 0px;
+  margin: 0px;
+  border: 0;
+  box-sizing: border-box;
+  transition: 0.2s;
+}

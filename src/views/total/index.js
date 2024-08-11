@@ -1,4 +1,4 @@
-import { Header } from "../../components/header";
+import { Header } from "../../views/header";
 import { Rent } from "../rent";
 import { ListTourService } from "../../components/list-tour-service";
 import { About } from "../about"
