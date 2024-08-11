@@ -42,6 +42,7 @@
   text-align: center;
   margin-bottom: 30px;
   color: white;
+  margin-top: -4px;
 }
 
 .favicon {
@@ -52,10 +53,9 @@
 .footer_bottom {
   background-color: black;
   height: 30px;
-  font-family: sans-serif;
   letter-spacing: 1px;
   color: white;
-  font-size: 15px;
+  font-size: 17px;
   text-align: center;
   padding-top: 4px;
 }
