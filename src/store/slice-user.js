@@ -17,7 +17,7 @@ export const userListSlice = createSlice({
     builder
       .addCase(getUserList.fulfilled, (state, action) => {
         state.loading = false;
-        state.tourServices = action.payload;
+        state.users = action.payload;
       })
       .addCase(getUserList.rejected, (state, action) => {
         state.loading = false;

@@ -7,6 +7,6 @@ export const store = configureStore({
   reducer: {
     tourServices: tourServiceReducer,
     form: formReducer,
-    users:usersReducer,
+    users: usersReducer,
   },
 });
