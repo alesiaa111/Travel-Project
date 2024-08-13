@@ -1,6 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { collection, getDocs, addDoc } from "firebase/firestore";
-import  { db } from "../firebase/firebase-config";
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import  { db, auth } from "../firebase/firebase-config";
 
 export const getTourServices = createAsyncThunk(
     "getTourServices",
@@ -45,6 +46,19 @@ export const getUserList = createAsyncThunk(
     } catch (error) {
       console.error("Ошибка при получении данных:", error);
       return thunkApi.rejectWithValue("Ошибка при получении данных");
+    }
+  }
+);
+
+export const loginAdmin = createAsyncThunk(
+  'auth/loginAdmin',
+  async ({ email, password }, thunkApi) => {
+    try {
+      const userlogIn = await signInWithEmailAndPassword(auth, email, password);
+      return thunkApi.fulfillWithValue({...userlogIn});
+    } catch (error) {
+      console.error("Ошибка при отправке данных:", error);
+      return thunkApi.rejectWithValue("Ошибка при отправке данных");
     }
   }
 );

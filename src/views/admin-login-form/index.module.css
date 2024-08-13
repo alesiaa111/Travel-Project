@@ -1,0 +1,96 @@
+.wrapper {
+  max-width: 100%;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/travel-cac99.appspot.com/o/image%2Fadmin.png?alt=media&token=c88eda91-b09b-49c4-8046-0f4afea9c803");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+.form {
+  max-width: 60%;
+  margin: 100px auto;
+  background-color: #1d5799;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.field > * {
+  display: block;
+}
+
+.field > input {
+  margin: 5px auto;
+  border-radius: 8px;
+  max-width: 70%;
+  outline: none;
+  border: 1px solid lightgray;
+  padding: 8px;
+}
+
+.field {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.error {
+  position: absolute;
+  max-width: 90px;
+  left: -10px;
+  bottom: 0;
+  background-color: rgb(214, 112, 43);
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.error::after {
+  content: "";
+  border: 5px solid rgb(214, 112, 43);
+  width: 0;
+  height: 0;
+  top: 40%;
+  transform: translate(-50%) rotate(45deg);
+  left: 100%;
+  position: absolute;
+}
+
+.error1 {
+  position: absolute;
+  max-width: 90px;
+  top: -20px;
+  left: -10px;
+  bottom: 0;
+  background-color: rgb(214, 112, 43);
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.error1::after {
+  content: "";
+  border: 5px solid rgb(214, 112, 43);
+  width: 0;
+  height: 0;
+  top: 40%;
+  transform: translate(-50%) rotate(45deg);
+  left: 100%;
+  position: absolute;
+}
+
+.form > button {
+  max-width: 50%;
+  margin-top: 20px;
+  margin: 0 auto;
+}
+
+.btn {
+  max-width: 40%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

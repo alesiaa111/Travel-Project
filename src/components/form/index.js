@@ -3,8 +3,8 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { submitForm } from "../../store/async-action";
 import { Button } from "../button";
-import styles from "./index.module.css";
 import { Center } from "../center";
+import styles from "./index.module.css";
 
 export const Form = ({ serviceId }) => {
   const dispatch = useDispatch();
