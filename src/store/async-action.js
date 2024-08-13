@@ -27,7 +27,7 @@ export const submitForm = createAsyncThunk(
         serviceId,
       });
       alert("Данные успешно отправлены!");
-      return thunkApi.dispatch;
+      return thunkApi.fulfillWithValue({ userName, phone, serviceId});
     } catch (error) {
       console.error("Ошибка при отправке данных:", error);
       return thunkApi.rejectWithValue("Ошибка при отправке данных");

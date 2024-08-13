@@ -1,6 +1,6 @@
 import React from "react";
-import { Router } from "./router";
+import { AppRouter } from "./AppRouter";
 
 export const App = () => {
-  return <Router />;
+  return <AppRouter />;
 };

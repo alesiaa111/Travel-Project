@@ -6,7 +6,7 @@ import { Button } from "../button/index.js";
 import { Modal } from "../modal/index.js";
 import { Center } from "../center/index.js";
 
-export const TourService = ({ serviceId, price, title, serviceType, imageUrl }) => {
+export const TourService = ({ id, serviceId, price, title, serviceType, imageUrl }) => {
   const [showModal, setShowModal] = useState(false);
 
   const toggler = (prev) => !prev;

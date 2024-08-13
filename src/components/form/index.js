@@ -15,11 +15,10 @@ export const Form = ({ serviceId }) => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  
 
   const formSubmit = (data) => {
-    dispatch(submitForm({...data, serviceId}));
-    reset()
+    dispatch(submitForm({ ...data, serviceId }));
+    reset();
   };
 
   return (

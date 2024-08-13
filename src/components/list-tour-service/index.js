@@ -24,16 +24,16 @@ export const ListTourService = () => {
       </Center>
 
       <div className={styles.contener}>
-        {servicesData.map((props) => {
+        {servicesData.map((service, index) => {
           return (
             <TourService
+              key={index}
               className={styles.wrapper}
               style={{
-                backgroundImage: `url(${props.imageUrl})`,
+                backgroundImage: `url(${service.imageUrl})`,
               }}
-              serviceId={props.serviceId}
-              {...props}
-              key={props.id}
+              serviceId={service.serviceId}
+              {...service}
             />
           );
         })}

@@ -17,7 +17,7 @@ export const Modal = memo(({ isOpen, onClose, serviceId }) => {
       <div className={styles.modal}>
         <ModalHeader onClick={onClose} />
         <div className={styles.title}>
-          <h3>Остались вопросы?</h3>
+          <span className={styles.titleMain}>Остались вопросы?</span>
           <span>Оставьте Ваш номер и мы перезвоним Вам прямо сейчас!</span>
         </div>
         <Form serviceId={serviceId} />
