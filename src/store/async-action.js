@@ -21,17 +21,18 @@ export const submitForm = createAsyncThunk(
   "form",
   async ({ userName, phone, serviceId }, thunkApi) => {
     try {
-      await addDoc(collection(db, "users"), {
+      const data = await addDoc(collection(db, "users"), {
         userName,
         phone,
         serviceId,
       });
-      return { userName, phone, serviceId };
+      alert("Данные успешно отправлены!");
+      return thunkApi.dispatch;
     } catch (error) {
       console.error("Ошибка при отправке данных:", error);
       return thunkApi.rejectWithValue("Ошибка при отправке данных");
     }
-  }
+    }
 );
 
 export const getUserList = createAsyncThunk(

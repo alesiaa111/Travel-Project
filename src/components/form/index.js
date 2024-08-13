@@ -1,44 +1,27 @@
 import { useForm } from "react-hook-form";
-import React, { useState, useEffect, useCallback } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { useDispatch } from "react-redux";
 import { submitForm } from "../../store/async-action";
-import { addFormUsers } from "../../store/selector";
 import { Button } from "../button";
 import styles from "./index.module.css";
 import { Center } from "../center";
 
 export const Form = ({ serviceId }) => {
   const dispatch = useDispatch();
-  const addForm = useSelector(addFormUsers);
-  const [userName, setName] = useState("");
-  const [phone, setPhone] = useState("");
+
   const {
     register,
     reset,
     handleSubmit,
     formState: { errors },
   } = useForm();
-
-  useEffect(() => {
-    dispatch(submitForm());
-  }, [dispatch]);
-
   
 
-  const formSubmit = async (data) => {
-    try {
-      const resultAction = await dispatch(
-        submitForm({ userName, phone, serviceId })
-      );
-
-      if (submitForm.fulfilled.match(resultAction));
-      alert("Данные успешно отправлены!");
-      reset();
-    } catch (error) {
-      alert("Ошибка при отправке данных: " + error.message);
-    }
+  const formSubmit = (data) => {
+    dispatch(submitForm({...data, serviceId}));
+    reset()
   };
-  
+
   return (
     <>
       <form className={styles.form} onSubmit={handleSubmit(formSubmit)}>
@@ -48,8 +31,6 @@ export const Form = ({ serviceId }) => {
           )}
           <input
             placeholder="Ваше имя"
-            type="text"
-            value={userName}
             {...register("userName", {
               required: { value: true, message: "Заполните поле" },
               minLength: {
@@ -57,7 +38,6 @@ export const Form = ({ serviceId }) => {
                 message: "Неверное имя",
               },
             })}
-            onChange={(e) => setName(e.target.value)}
           />
         </div>
         <div className={styles.field}>
@@ -67,7 +47,6 @@ export const Form = ({ serviceId }) => {
           <input
             placeholder="Ваш номер +375"
             type="tel"
-            value={phone}
             {...register("phone", {
               required: { value: true, message: "Заполните поле" },
               pattern: {
@@ -75,15 +54,10 @@ export const Form = ({ serviceId }) => {
                 message: "Неверный формат",
               },
             })}
-            onChange={(e) => setPhone(e.target.value)}
           />
         </div>
         <Center>
-          <Button
-            type="submit"
-            className={styles.btn}
-            text="Записаться"
-          />
+          <Button type="submit" className={styles.btn} text="Записаться" />
         </Center>
       </form>
     </>
