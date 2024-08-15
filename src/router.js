@@ -6,10 +6,8 @@ import { Layout } from "./views/layout";
 import { NotFound } from "./views/not-found";
 import { Rivers } from "./views/rivers/index";
 import { Total } from "./views/total/index";
-import { AdminLoginForm } from "./views/admin-login-form/index"
+import { AdminLoginForm } from "./views/admin-login-form/index";
 import { UserList } from "./views/user-list/index";
-import { PrivateRoute } from "./views/private-route/index";
-// import { FirebaseAuth } from "./views/firebase-auth/index";
 
 export const Router = () => {
   return (
@@ -22,14 +20,6 @@ export const Router = () => {
         <Route path="/rivers" element={<Rivers />} />
         <Route path="/user-list" element={<UserList />} />
         <Route path="/admin" element={<AdminLoginForm />} />
-        <Route
-          path="/user-list"
-          element={
-            <PrivateRoute>
-              <UserList />
-            </PrivateRoute>
-          }
-        />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
