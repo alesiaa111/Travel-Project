@@ -10,32 +10,25 @@ import { getUserList } from "../../store/async-action";
 import styles from "./index.module.css";
 
 export const UserList = () => {
-
   const dispatch = useDispatch();
-  const users= useSelector(getUserListFromAdmin);
+  const users = useSelector(getUserListFromAdmin);
 
   useEffect(() => {
     dispatch(getUserList());
   }, [dispatch]);
 
-
   return (
     <>
-      <Center>
-        <Title size="xl" title="Список участников" />
+      <div className={styles.wrapper}>
+        <Center>
+          <Title size="m" title="Список участников" />
         </Center>
         <div className={styles.contener}>
-      {users.map((props, index) => {
-          return (
-            <Users
-              className={styles.wrapper}
-              {...props}
-              key={index}
-            />
-          );
-        })}
+          {users.map((props, index) => {
+            return <Users className={styles.users} {...props} key={index} />;
+          })}
+        </div>
       </div>
-      
     </>
   );
 };
