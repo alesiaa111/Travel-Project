@@ -21,13 +21,14 @@
 .contact {
   display: flex;
   flex-direction: column;
+  gap:5px;
   text-align: center;
   color: white;
   text-shadow: 0px 0px 3px black;
   padding: 2px;
 }
 .tel {
-  margin-bottom: -1px;
+  margin-top:5px;
 }
 
 .footer_favicon {
@@ -49,12 +50,11 @@
 
 .footer_bottom {
   background-color: black;
-  height: 30px;
   letter-spacing: 1px;
   color: white;
   font-size: 15px;
   text-align: center;
-  padding-top: 4px;
+  padding: 4px;
 }
 
 .favicon:hover:before {
@@ -84,8 +84,8 @@ a {
 
 @media (max-width: 767px) {
   .footer_wrapper {
-    display:flex;
-    flex-wrap:wrap;
+    display: flex;
+    flex-wrap: wrap;
     font-size: 17px;
   }
 }

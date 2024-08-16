@@ -18,7 +18,7 @@ export const Router = () => {
         <Route path="/total" element={<Total />} />
         <Route path="/rent" element={<Rent />} />
         <Route path="/rivers" element={<Rivers />} />
-        <Route path="/user-list" element={<UserList />} />
+        <Route path="/user-list/ceqruty/admin/***secret***/router" element={<UserList />} />
         <Route path="/admin" element={<AdminLoginForm />} />
         <Route path="*" element={<NotFound />} />
       </Route>

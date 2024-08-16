@@ -1,10 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-// import { useSelector } from "react-redux";
+
 import { useNavigate } from "react-router-dom";
 import { loginAdmin } from "../../store/async-action";
-// import { loadingLogIn } from "../../store/selector"
+
 import { Button } from "../../components/button";
 import { Center } from "../../components/center";
 import { Title } from "../../components/title";
@@ -19,31 +19,27 @@ export const AdminLoginForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-    // const loading = useSelector(state => loadingLogIn(state));
 
   const onSubmit = (data) => {
-    // dispatch(loadingLogIn(true));
     dispatch(loginAdmin(data))
       .unwrap()
       .then(() => {
         console.log("успешно");
-        navigate("/user-list");
+        navigate("/user-list/ceqruty/admin/***secret***/router");
       })
       .catch((error) => {
         alert("Вы не являетесь Администратором");
         reset();
         console.error(error);
-      })
-      // .finally(() => {dispatch(loadingLogIn(false))
-      // });
+      });
   };
 
   return (
     <>
-      <div className="wrapper">
+      <div className={styles.wrapper}>
         <Center>
           <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-            <Title size="m" title="Вход для Администратора" />
+            <Title size="s" title="Вход для Администратора" />
             <div className={styles.field}>
               {errors.email && (
                 <div className={styles.error}>{errors.email.message}</div>
@@ -68,9 +64,9 @@ export const AdminLoginForm = () => {
                 {...register("password", {
                   required: { value: true, message: "Заполните поле" },
                   minLength: {
-                    value:6,
+                    value: 6,
                     message: "Не менее 6 символов",
-                  }
+                  },
                 })}
               />
             </div>

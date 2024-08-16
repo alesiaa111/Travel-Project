@@ -1,17 +1,18 @@
 .wrapper {
   max-width: 100%;
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/travel-cac99.appspot.com/o/image%2Fadmin.png?alt=media&token=c88eda91-b09b-49c4-8046-0f4afea9c803");
-  background-repeat: no-repeat;
+  height: 90vh;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/travel-cac99.appspot.com/o/image%2Fadminform.png?alt=media&token=c7d50980-042c-4eb8-8b7f-658f103fe7a6");
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
 }
+
 .form {
-  max-width: 60%;
+  max-width: 70%;
   margin: 100px auto;
   background-color: #1d5799;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
   border-radius: 20px;
-  padding: 10px;
+  padding: 20px;
   color: white;
   display: flex;
   flex-direction: column;
@@ -22,12 +23,12 @@
 }
 
 .field > input {
+  width: 80%;
   margin: 5px auto;
   border-radius: 8px;
-  max-width: 70%;
   outline: none;
   border: 1px solid lightgray;
-  padding: 8px;
+  padding: 10px;
 }
 
 .field {
