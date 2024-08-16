@@ -7,6 +7,7 @@ import { Title } from "../../components/title";
 export const Rivers = () => {
   return (
     <>
+    <div className={styles.wrapper}>
       <Center>
         <Title size="xl" title="Маршруты сплавов по рекам Беларуси" />
         <span className={styles.text}>
@@ -29,6 +30,7 @@ export const Rivers = () => {
         </span>
       </Center>
       <RiverList />
+      </div>
      </>
   );
 };

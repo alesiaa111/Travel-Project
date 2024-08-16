@@ -1,12 +1,16 @@
+.wrapper{
+  margin-top: 20px;
+}
+
 .text {
   color: rgb(61, 61, 61);
-  font-size: 2em;
+  font-size: 30px;
   margin-top: 10px;
  
 }
 .rivers {
   max-width: 100%;
-  height: 55vh;
+  height: 50vh;
   border-radius: 10px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,4 +57,10 @@
     right: 5px;
     padding: 3px;
     margin: 5px;
+}
+
+@media (max-width: 767px) {
+  .text {
+    font-size: 20px;
+  }
 }

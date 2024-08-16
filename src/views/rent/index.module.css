@@ -23,8 +23,7 @@
 
 .rent_text {
   margin-top: 30px;
-  font-size: 22px;
-  line-height: 27px;
+  font-size: 20px;
 }
 
 .price {
@@ -36,4 +35,10 @@
 
 li {
   list-style-type: none;
+}
+
+@media (max-width: 767px) {
+  .rent_text {
+    font-size: 17px;
+  }
 }

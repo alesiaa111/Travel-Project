@@ -8,17 +8,31 @@
 }
 
 .s {
-  font-size: 30px;
+  font-size: 27px;
   padding: 5px 2px;
 }
 .m {
-  font-size: 32px;
+  font-size: 30px;
   padding: 15px 8px;
 }
 
 .xl {
   color: rgb(39, 38, 38);
-  font-size: 37px;
+  font-size: 35px;
   margin-top: 30px;
   line-height: 35px;
+}
+
+
+@media (max-width: 767px){
+  .s {
+    font-size: 20px;
+  }
+  .m {
+    font-size: 23px;
+  }
+  .xl {
+    font-size: 30px;
+  }
+  
 }
