@@ -1,17 +1,19 @@
 .contener {
   margin-left: 2%;
   font-size: 20px;
+  margin-top: 10px;
 }
 .user_contener {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
-  max-width:100%;
+  max-width:80%;
   align-items: center;
   margin-top: 10px;
   margin-left: 40px;
   background-color: rgba(255, 228, 196, 0.459);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
   border-radius: 20px;
+  margin-top: 10px;
 }
 .user{
     margin-top: 5px;

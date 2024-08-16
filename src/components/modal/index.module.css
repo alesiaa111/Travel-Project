@@ -28,3 +28,11 @@
   color: white;
   cursor: pointer;
 }
+@media (max-width: 767px){
+  .title {
+    font-size: 17px;
+  }
+  .titleMain {
+    font-size: 23px;
+  }
+}

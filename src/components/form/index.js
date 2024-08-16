@@ -2,8 +2,8 @@ import { useForm } from "react-hook-form";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { submitForm } from "../../store/async-action";
-import { Button } from "../button";
-import { Center } from "../center";
+import { Button } from "../button/index";
+import { CenterButton } from "../center-button/index";
 import styles from "./index.module.css";
 
 export const Form = ({ serviceId }) => {
@@ -55,9 +55,9 @@ export const Form = ({ serviceId }) => {
             })}
           />
         </div>
-        <Center>
-          <Button type="submit" className={styles.btn} text="Записаться" />
-        </Center>
+        <CenterButton>
+          <Button type="submit" alineItem="center" text="Записаться" />
+          </CenterButton>
       </form>
     </>
   );

@@ -1,6 +1,5 @@
 .btn {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
   background-color: #8c959e;
   border: 1px solid lightgray;
   border-color: #000;
@@ -9,10 +8,9 @@
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   outline: none;
   cursor: pointer;
-  min-width: 200px;
   color: white;
-  font-size: 22px;
-  padding: 5px;
+  font-size: 20px;
+  padding: 10px;
   margin-bottom: 20px;
 }
 
@@ -20,4 +18,9 @@
   background-color: white;
   border-color: black;
   color: black;
+}
+@media (max-width: 767px){
+  .btn {
+    font-size: 15px;
+  }
 }

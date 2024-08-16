@@ -48,7 +48,7 @@
     font-weight:bold;
     padding: 3px;
     margin-left: 5px;
-    margin-top: 210px;
+    bottom: 5px;
   }
 .swiperContainer {
   display: flex;

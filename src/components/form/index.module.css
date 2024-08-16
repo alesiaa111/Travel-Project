@@ -70,11 +70,11 @@
 }
 
 .form > button {
-  max-width: 50%;
+  width: 40%;
   margin-top: 20px;
   margin: 0 auto;
 }
 
 .btn {
-  max-width: 40%;
+  align-items: center;
 }
