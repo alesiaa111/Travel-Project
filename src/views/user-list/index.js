@@ -20,9 +20,11 @@ export const UserList = () => {
   return (
     <>
       <div className={styles.wrapper}>
+        <div className={styles.title}>
         <Center>
           <Title size="m" title="Список участников" />
         </Center>
+        </div>
         <div className={styles.contener}>
           {users.map((props, index) => {
             return <Users className={styles.users} {...props} key={index} />;

@@ -2,8 +2,13 @@
   max-width: 100%;
   background-image: url("https://firebasestorage.googleapis.com/v0/b/travel-cac99.appspot.com/o/image%2Fadmin.png?alt=media&token=c88eda91-b09b-49c4-8046-0f4afea9c803");
   background-size: cover;
-  background-position: center;
+  background-position:bottom;
+
+  padding-bottom: 40px;
 }
 .contener {
   color: white;
+}
+.title {
+  padding-top: 35px;
 }
