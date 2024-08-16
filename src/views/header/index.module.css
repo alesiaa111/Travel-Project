@@ -34,8 +34,8 @@
 @media (max-width: 768px) {
   .firstTitle {
     font-size: 30px;
-}
-.phone_title {
-  font-size: 25px;
-}
+  }
+  .phone_title {
+    font-size: 25px;
+  }
 }

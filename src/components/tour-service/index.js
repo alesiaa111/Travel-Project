@@ -6,7 +6,14 @@ import { Button } from "../button/index.js";
 import { Modal } from "../modal/index.js";
 import { Center } from "../center/index.js";
 
-export const TourService = ({ id, serviceId, price, title, serviceType, imageUrl }) => {
+export const TourService = ({
+  id,
+  serviceId,
+  price,
+  title,
+  serviceType,
+  imageUrl,
+}) => {
   const [showModal, setShowModal] = useState(false);
 
   const toggler = (prev) => !prev;
@@ -29,7 +36,13 @@ export const TourService = ({ id, serviceId, price, title, serviceType, imageUrl
           }}
         />
       </Center>
-      {showModal && <Modal isOpen={showModal} onClose={onModalClose} serviceId={serviceId}/>}
+      {showModal && (
+        <Modal
+          isOpen={showModal}
+          onClose={onModalClose}
+          serviceId={serviceId}
+        />
+      )}
     </div>
   );
 };

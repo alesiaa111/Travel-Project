@@ -10,9 +10,8 @@
 }
 
 .top {
-    display: flex;
-    flex-direction: row;
-
+  display: flex;
+  flex-direction: row;
 }
 .riversTime {
   background-color: yellow;
@@ -41,15 +40,15 @@
   margin-top: 15px;
 }
 .riversKm {
-    position: absolute;
-    background-color: rgb(68, 166, 211);
-    color:black;
-    font-size: 20px;
-    font-weight:bold;
-    padding: 3px;
-    margin-left: 5px;
-    bottom: 5px;
-  }
+  position: absolute;
+  background-color: rgb(68, 166, 211);
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 3px;
+  margin-left: 5px;
+  bottom: 5px;
+}
 .swiperContainer {
   display: flex;
   align-items: center;
@@ -58,7 +57,7 @@
 
 .arrowButton {
   background-color: transparent;
-  color:white;
+  color: white;
   border: none;
   font-size: 24px;
   cursor: pointer;
@@ -68,5 +67,5 @@
 
 .arrowButton:hover {
   transform: scale(1.1);
-  color:#1d5799;
+  color: #1d5799;
 }

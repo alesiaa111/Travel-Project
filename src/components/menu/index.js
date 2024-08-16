@@ -34,8 +34,8 @@ export const Menu = () => {
         </div>
 
         <div className={styles.menu_phone}>
-        <a href="tel:+375256555405">  +375(25) 655-54-05</a>
-        <a href="tel:+375291145220">  +375(29) 114-52-20</a>
+          <a href="tel:+375256555405"> +375(25) 655-54-05</a>
+          <a href="tel:+375291145220"> +375(29) 114-52-20</a>
         </div>
       </div>
     </>

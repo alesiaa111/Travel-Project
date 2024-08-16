@@ -57,7 +57,7 @@ export const Form = ({ serviceId }) => {
         </div>
         <CenterButton>
           <Button type="submit" alineItem="center" text="Записаться" />
-          </CenterButton>
+        </CenterButton>
       </form>
     </>
   );

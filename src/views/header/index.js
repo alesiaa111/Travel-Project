@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./index.module.css";
-import { slider } from "../const/index"
+import { slider } from "../const/index";
 
 export const Header = () => {
   const settings = {
@@ -25,13 +25,14 @@ export const Header = () => {
           <div
             className={styles.firstScreen}
             style={{
-              backgroundImage:`url(${slide.imageUrl})`,
+              backgroundImage: `url(${slide.imageUrl})`,
             }}
-          ><div className={styles.logo}>
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/travel-cac99.appspot.com/o/image%2FLogo.png?alt=media&token=6cc4403c-afc9-45c9-ae44-74230afadc91"
-              alt="Logo"
-            />
+          >
+            <div className={styles.logo}>
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/travel-cac99.appspot.com/o/image%2FLogo.png?alt=media&token=6cc4403c-afc9-45c9-ae44-74230afadc91"
+                alt="Logo"
+              />
             </div>
             <h1 className={styles.firstTitle}>{slide.title}</h1>
             <div className={styles.phone_title}>

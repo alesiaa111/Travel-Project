@@ -10,6 +10,3 @@ export const getUserListFromAdmin = (state) => {
   return state.users.users;
 };
 
-export const loadingLogIn = (state) => {
-  return state.userAuth.loading;
-};

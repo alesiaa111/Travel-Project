@@ -23,8 +23,7 @@
   line-height: 35px;
 }
 
-
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .s {
     font-size: 20px;
   }
@@ -34,5 +33,4 @@
   .xl {
     font-size: 30px;
   }
-  
 }
